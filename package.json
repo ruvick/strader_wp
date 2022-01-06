@@ -1,7 +1,7 @@
 {
-  "name": "smartgardens",
+  "name": "strader",
   "version": "1.0.1",
-  "description": "smartgardens",
+  "description": "strader",
   "main": "index.php",
   "scripts": {
     "test": "editorconfig-checker",
@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ruvick/smartgardens_wp.git"
+    "url": "git+https://github.com/ruvick/strader_wp.git"
   },
   "keywords": [
     "wp",
@@ -44,9 +44,9 @@
   "author": "ruvick",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ruvick/smartgardens_wp/issues"
+    "url": "https://github.com/ruvick/strader_wp/issues"
   },
-  "homepage": "https://github.com/ruvick/smartgardens_wp#readme",
+  "homepage": "https://github.com/ruvick/strader_wp#readme",
   "dependencies": {
     "editorconfig-checker": "^3.1.0",
     "group-css-media-queries": "^1.4.1",
