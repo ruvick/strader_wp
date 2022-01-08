@@ -187,24 +187,7 @@
 	</div>
 </section>
 
-<section id="applic" class="applic">
-	<div class="_container">
-		<div class="applic__block">
-			<h2 class="applic__block-title">Остались вопросы</h2>
-			<p class="applic__block-subtitle">Оставьте заявку и мы обязательно на них ответим</p>
-			<form action="#" class="applic__block-form">
-				<div class="form__line">
-					<input id="name" autocomplete="off" type="text" name="form[]" data-error="Заполните поля" data-value="В корзину"
-					class="applic__block-form-input input">
-					<input id="tel2" autocomplete="off" type="text" name="form[]" data-error="Заполните поля" data-value="+7 (___) ___-__-___"
-					class="applic__block-form-input input _phone _req">
-					<button type="submit" class="applic__block-form-btn form__btn btn">Оставить заявку</button>
-				</div>
-				<p class="applic__block-footnote">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
-			</form>
-		</div>
-	</div>
-</section>
+<?php get_template_part('template-parts/applic-form');?>
 
 <section id="sale" class="sale">
 	<div class="_container">

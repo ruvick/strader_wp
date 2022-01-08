@@ -5341,7 +5341,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   margin: 10px 0; }
 /* Popup JS End*/
 
-
+.applic__block-form .SendetMsg {
+  margin: 0;
+}
 
 
 
