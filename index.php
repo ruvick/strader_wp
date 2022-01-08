@@ -8,32 +8,23 @@
 	<!-- <div class="slider__wrap"> -->
 		<div class="sl-index__container _container">
 			<!-- Слайдер с техническим классом _swiper -->
-			<div class="sl-index _swiper d-flex">  
-
-				<div class="sl-index-item sl-index-item_01 sl-index__slide">
-					<h1 class="sl-index-item__title">
-						Струнные <br>
-						инструменты и <br>
-						аксессуары
-					</h1>
-				</div>
-
-				<div class="sl-index-item sl-index-item_02 sl-index__slide">
-					<h1 class="sl-index-item__title">
-						Струнные <br>
-						инструменты и <br>
-						аксессуары
-					</h1>
-				</div>
-
-				<div class="sl-index-item sl-index-item_03 sl-index__slide">
-					<h1 class="sl-index-item__title">
-						Струнные <br>
-						инструменты и <br>
-						аксессуары
-					</h1>
-				</div>
-
+			<div class="sl-index _swiper d-flex"> 
+			<?
+			$pict = carbon_get_theme_option('slider_index');
+			if ($pict) {
+				$pictIndex = 0;
+				foreach ($pict as $item) {
+					?>
+					<div class="sl-index-item sl-index-item_01 sl-index__slide" style="background-image: url(<?php echo wp_get_attachment_image_src($item['slider_img'], 'full')[0]; ?>);">
+						<? if (!empty($item['slider_title'])) { ?>
+							<h1 class="sl-index-item__title"><? echo $item['slider_title']; ?></h1>
+						<? } ?>
+					</div>
+					<?
+					$pictIndex++;
+				}
+			}
+			?> 
 			</div>
 			<!-- Кнопки-стрлеки -->
 			<div class="swiper-button swiper-button-next sl-index-button-next"></div>
