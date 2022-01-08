@@ -166,61 +166,31 @@
 
 <section id="reviews" class="reviews">
 	<div class="_container">
-		<h2>Отзывы наших клиентов</h2>
+		<h2>Отзывы наших клиентов</h2> 
 
 		<div class="reviews__row d-flex">
-
-			<div class="reviews__card d-flex">
-				<div class="reviews__image-wrap">
-					<div class="reviews__image">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/01.jpg?_v=1641456649011" alt=""></picture>
-					</div>
-				</div>
-				<h4>Алексей</h4>
-				<p class="reviews__date">18 сентября 2020</p>
-				<span class="reviews__like"></span>
-				<p class="reviews__descp">
-					Резонаторный корпус состоит из двух выпуклых дек и узкой рамки между ними, состоящей из шести обечаек, 4 уголков и 2 клёцев. 
-					Деки состоят из верхнего овала, узкой средней части, образуемой двумя эсами (вырезами в форме буквы С), и нижнего овала. 
-					Резонаторные отверстия 
-				</p>
-				<a href="#" class="reviews__btn">Читать отзыв в Vk</a>
-			</div>
-
-			<div class="reviews__card d-flex">
-				<div class="reviews__image-wrap">
-					<div class="reviews__image">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/02.jpg?_v=1641456649011" alt=""></picture>
-					</div>
-				</div>
-				<h4>Маргарита</h4>
-				<p class="reviews__date">5 июля 2021</p>
-				<span class="reviews__like"></span>
-				<p class="reviews__descp">
-					Резонаторный корпус состоит из двух выпуклых дек и узкой рамки между ними, состоящей из шести обечаек, 4 уголков и 2 клёцев. 
-					Деки состоят из верхнего овала, узкой средней части, образуемой двумя эсами (вырезами в форме буквы С), и нижнего овала. 
-					Резонаторные отверстия 
-				</p>
-				<a href="#" class="reviews__btn">Читать отзыв в Vk</a>
-			</div>
-
-			<div class="reviews__card d-flex">
-				<div class="reviews__image-wrap">
-					<div class="reviews__image">
-						<picture><source srcset="<?php echo get_template_directory_uri();?>/img/reviews/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/reviews/03.jpg?_v=1641456649011" alt=""></picture>
-					</div>
-				</div>
-				<h4>Ирина</h4>
-				<p class="reviews__date">18 сентября 2020</p>
-				<span class="reviews__like"></span>
-				<p class="reviews__descp">
-					Резонаторный корпус состоит из двух выпуклых дек и узкой рамки между ними, состоящей из шести обечаек, 4 уголков и 2 клёцев. 
-					Деки состоят из верхнего овала, узкой средней части, образуемой двумя эсами (вырезами в форме буквы С), и нижнего овала. 
-					Резонаторные отверстия 
-				</p>
-				<a href="#" class="reviews__btn">Читать отзыв в Vk</a>
-			</div>
-
+		<? $reviews = carbon_get_theme_option('complex_reviews');
+				if ($reviews) {
+					$reviewsIndex = 0;
+					foreach ($reviews as $item) {
+						?>
+							<div class="reviews__card d-flex">
+								<div class="reviews__image-wrap">
+									<div class="reviews__image">
+										<img src="<?php echo wp_get_attachment_image_src($item['img_reviews'], 'large')[0]; ?>" alt="">
+									</div>
+								</div>
+								<h4><? echo $item['name_reviews']; ?></h4>
+								<p class="reviews__date"><? echo $item['data_reviews']; ?></p>
+								<span class="reviews__like"></span>
+								<p class="reviews__descp"><? echo $item['descp_reviews']; ?></p>
+								<a href="<? echo $item['link_reviews']; ?>" class="reviews__btn">Читать в источнике</a>
+							</div>
+						<?
+						$reviewsIndex++; 
+					}
+				}
+				?>
 		</div>
 
 	</div>

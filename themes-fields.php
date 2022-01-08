@@ -17,8 +17,24 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       //   ->set_width(30),
       // Field::make( 'image', 'as_logo_white', 'Логотип в подвале')
       //   ->set_width(30),
-      Field::make('text', 'about_home_title', 'Заголовок на главной'),
+      Field::make('text', 'about_home_title', 'Заголовок на главной'), 
       Field::make('rich_text', 'about_home', 'О нашей компании')
+    ))
+    ->add_tab('Отзывы', array(
+      Field::make('complex', 'complex_reviews', 'Выводим Отзывы')
+      // ->set_max(3) // Можно будет выбрать только 5 постов
+      ->add_fields(array(
+        Field::make('image', 'img_reviews', 'Фото')
+        ->set_width(10),
+        Field::make('text', 'name_reviews', 'Имя')   
+        ->set_width(10),
+        Field::make('text', 'data_reviews', 'Дата')   
+        ->set_width(10),
+        Field::make('text', 'descp_reviews', 'Текст')   
+        ->set_width(30),
+        Field::make('text', 'link_reviews', 'Ссылка')   
+        ->set_width(10),
+        )) 
     ))
     ->add_tab('Акции', array(
       Field::make('complex', 'complex_promo', 'Верхние блоки на главной')
