@@ -3,16 +3,14 @@
 <div class="header__top">
   <div class="header__top-container _container">
     <div class="header__top-column">
-      <ul class="header__top-list">
-        <li class="header__top-list-item"><a href="#" class="header__top-list-item-link">Как сделать заказ</a></li>
-        <li class="header__top-list-item"><a href="#" class="header__top-list-item-link">Доставка</a></li>
-        <li class="header__top-list-item"><a href="#" class="header__top-list-item-link">Оплата</a></li>
-        <li class="header__top-list-item"><a href="#" class="header__top-list-item-link">Контакты</a></li>
-      </ul>
+      <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'header__top-list',
+      'container_class' => 'header__top-list','container' => false )); ?>
     </div>
     <div class="header__top-column">
-      <a href="mailto:strader-art@gmail.com" class="header__top-email">strader-art@gmail.com</a>
-      <a href="tel:88004882222" class="header__top-phone">8 800 488 22 22</a>
+      <? $mail = carbon_get_theme_option("as_email");
+			  if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="header__top-email"><? echo $mail; ?></a><? } ?>
+      <? $tel = carbon_get_theme_option("as_phones_1"); 
+				if (!empty($tel)){?><a href="tel:<? echo preg_replace('/[^0-9]/', '', $tel); ?>" class="header__top-phone"><? echo $tel; ?></a><?}?> 
       <a href="#callback" class="header__top-popup _popup-link">Заказать звонок</a>  
     </div>
   </div>
@@ -89,7 +87,7 @@
 <!-- Мобильное меню -->
 <div class="mob-menu header__mob-menu">
   <ul class="mob-menu__list">
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Каталог</a></li>
+    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Каталог</a></li> 
     <li class="mob-menu__item"><a href="#" class="mob-menu__link">Струны</a></li>
     <li class="mob-menu__item"><a href="#" class="mob-menu__link">Аксессуары</a></li>
     <li class="mob-menu__item"><a href="#" class="mob-menu__link">Футляры и чехлы</a></li>

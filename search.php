@@ -12,16 +12,19 @@ get_header(); ?>
 
 <main id="primary" class="page site-main"> 
 
+		<section class="header-sec">
+  		<div class="_container">
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+					}
+				?>  
+    		<h1 class="header-sec__title">Результаты поиска</h1>
+  		</div>
+		</section>
+
 	<section class="content"> 
 		<div class="_container">
-
-		<?php get_template_part('template-parts/benefit-slider');?>
-
-			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			}
-			?> 
 
 <?
 				// $arg = $wp_query->query;
@@ -88,8 +91,6 @@ get_header(); ?>
 				// print_r($queryM);
 				// echo "</pre>";
 			?>
-
-			<h1>Результаты поиска</h1>
 
 			<div class="prod-card d-flex">
 

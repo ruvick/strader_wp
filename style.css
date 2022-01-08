@@ -5019,6 +5019,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 /* Оформление дефолтных стилей */
+.content {
+  padding: 30px 0;
+}
 .content ul {
   margin-bottom: 35px;
 }

@@ -23,20 +23,24 @@ get_header(); ?>
 
 <?php get_template_part('template-parts/header-section');?>
 
-<main class="main page">	
-
-<section class = "content">
-		<div class="_container">
-
-			<div class="bread-crumbs-box">
+<main class="main page">
+	
+		<section class="header-sec">
+  		<div class="_container">
+			<!-- <div class="bread-crumbs-box"> -->
 				<?php
 					if ( function_exists('yoast_breadcrumb') ) {
 					yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
 					}
 				?>  
-			</div>
+			<!-- </div> -->
+    		<h1 class="header-sec__title"><?php the_title();?></h1>
+  		</div>
+		</section>
+
+<section class = "content">
+		<div class="_container">
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <h1><?php the_title();?></h1>
         <?php the_content();?>
       <?php endwhile;?>
       <?php endif; ?>

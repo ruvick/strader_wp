@@ -19,21 +19,23 @@ get_header(); ?>
 
 	<main id="primary" class="page site-main"> 
 
+		<section class="header-sec">
+  		<div class="_container">
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+					}
+				?> 
+    		<h1 class="header-sec__title"><?php the_title();?></h1>
+  		</div>
+		</section>
+
 		<section class="content"> 
 			<div class="_container">
-
-			<?php
-			if ( function_exists('yoast_breadcrumb') ) {
-				yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			}
-			?> 
-
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-				<h1><?php the_title();?></h1>
 					<?php the_content();?>
 					<?php endwhile;?>
 				<?php endif; ?> 
-
 			</div>
 		</section>
 	</main>

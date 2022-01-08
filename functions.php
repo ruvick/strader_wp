@@ -56,7 +56,7 @@ function change_menu_item_css_classes($classes, $item, $args, $depth)
 	}
 
 	if ($item->ID  && 'menu_main' === $args->theme_location) {
-		$classes[] = 'header-bottom-wrap-menu-item';
+		$classes[] = 'header__top-list-item';
 	}
 
 	return $classes;
@@ -68,7 +68,7 @@ add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 4)
 function filter_nav_menu_link_attributes($atts, $item, $args, $depth)
 {
 	if (in_array($args->theme_location, ['menu_main'])) {
-		$atts['class'] = 'header-bottom-wrap-menu-item__link';
+		$atts['class'] = 'header__top-list-item-link';
 
 		if ($item->current) {
 			$atts['class'] .= ' menu-link--active'; //активный пункт меню
@@ -79,15 +79,15 @@ function filter_nav_menu_link_attributes($atts, $item, $args, $depth)
 
 
 // Добавляет иконку к ссылкам меню, прикрепленное к области меню menu_main
-function change_menu_item_args($args)
-{
-	if ($args->theme_location == 'menu_main') {
-		$args->link_after = '<img src="' . get_template_directory_uri() . '/img/home/header-menu-arrow-down.svg" alt="" class="header-bottom-wrap-menu-item-down__img">';
-	}
+// function change_menu_item_args($args)
+// {
+// 	if ($args->theme_location == 'menu_main') {
+// 		$args->link_after = '<img src="' . get_template_directory_uri() . '/img/home/header-menu-arrow-down.svg" alt="" class="header-bottom-wrap-menu-item-down__img">';
+// 	}
 
-	return $args;
-}
-add_filter('nav_menu_item_args', 'change_menu_item_args');
+// 	return $args;
+// }
+// add_filter('nav_menu_item_args', 'change_menu_item_args');
 
 
 // Добавляем класс к submenu, прикрепленное к области меню menu_main
