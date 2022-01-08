@@ -52,7 +52,7 @@
         </a>
       </div>
       <div class="header__center-icons">
-        <a href="#" class="header__center-icons-item bascket-icon icons-item-03">
+        <a href="<?php echo get_permalink(17);?>" class="header__center-icons-item bascket-icon icons-item-03">
           <span class="icons-item-number bascket-icon__number bascet_counter">0</span>
           <p class="header__center-icons-name">Корзина</p>
         </a>

@@ -3982,12 +3982,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 19px;
 }
 
+.footer__menu a,
 .footer__menu-item-link {
   display: block;
   font-size: 15px;
   line-height: 18px;
   color: #fff;
-  margin-bottom: 8px;
+  margin-bottom: 8px; 
 }
 
 .footer__column-phone {
