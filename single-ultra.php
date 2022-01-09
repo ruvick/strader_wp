@@ -12,26 +12,16 @@ get_header(); ?>
 
 <main class="page">
 
-<section class="header-sec">
-  <div class="_container">
-    <p id="breadcrumbs">
-      <span>
-        <span>
-          <a href="index.html">
-            Главная
-          </a> /
-          <a href="index.html">
-            Каталог
-          </a> /
-          <span class="breadcrumb_last" aria-current="page">
-            Струны для скрипки Thomastik Dominant 135 1/2 (4 шт)
-          </span>
-        </span>
-      </span>
-    </p>
-    <h1 class="header-sec__title">Струны для скрипки Thomastik Dominant 135 1/2 (4 шт)</h1>
-  </div>
-</section>
+    <section class="header-sec">
+  		<div class="_container">
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+					}
+				?> 
+    		<h1 class="header-sec__title"><?the_title();?></h1>
+  		</div>
+		</section>
 
 <section class="product-sec">
   <div class="_container">

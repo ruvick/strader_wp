@@ -4,26 +4,16 @@
 
 <main class="page">
 
-<section class="header-sec">
-  <div class="_container">
-    <p id="breadcrumbs">
-      <span>
-        <span>
-          <a href="index.html">
-            Главная
-          </a> /
-          <a href="index.html">
-            Каталог
-          </a> /
-          <span class="breadcrumb_last" aria-current="page">
-            Струны в наборах для скрипки
-          </span>
-        </span>
-      </span>
-    </p>
-    <h1 class="header-sec__title">Струны в наборах для скрипки</h1>
-  </div>
-</section>
+    <section class="header-sec">
+  		<div class="_container">
+				<?php
+					if ( function_exists('yoast_breadcrumb') ) {
+						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+					}
+				?> 
+    		<h1 class="header-sec__title"><?php single_cat_title( '', true );?></h1>
+  		</div>
+		</section>
 
 <section class="catalog-sec">
   <div class="_container">
@@ -216,197 +206,12 @@
         </div>
 
         <div class="catalog-sec__main-wrap">
-          <div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/07.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/07.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/08.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/08.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/09.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/09.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/10.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/10.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/06.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/06.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/11.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/11.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/05.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/05.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/02.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/03.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
-
-<div class="catalog-card-column">
-<a href="#" class="card card-pr">
-<div class="card__img">
-<picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/04.jpg?_v=1641456649011" alt=""></picture>
-</div>
-<h6 class="card__title card-pr__title">
-Струны для скрипки 
-Thomastik Dominant 135 1/8
-(4 шт)
-</h6>
-<span class="card-pr__availability">В наличии, более 3 шт.</span>
-<p class="card__price rub">3650 </p>
-<!-- <span class="card__sticker">15%</span> -->
-</a>
-</div>
+					<?php
+						while(have_posts()):
+							the_post();
+							get_template_part('template-parts/product-elem');  
+						endwhile;
+					?>
         </div>
 
       </div>
@@ -429,6 +234,8 @@ Thomastik Dominant 135 1/8
         <a class="pagination__next" href="#"></a>
       </div>
     </nav>
+
+		<!-- <?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?> -->
 
   </div>
 </section>

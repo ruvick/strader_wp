@@ -6,21 +6,6 @@
 
 get_header(); ?>
 
-<!-- События на кнопке -->
-<button class="btn btn__to-card" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
-  data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
-	data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
-	data-size = ""
-  data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"
-  data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
-  data-name = "<? echo  get_the_title();?>"
-  data-count = "1"
-  data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>"
-
-  data-picture = "<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>">
-    Добавить в корзину
-</button> 
-
 <?php get_template_part('template-parts/header-section');?>
 
 <main class="main page">
@@ -149,7 +134,7 @@ get_header(); ?>
         </template>
 
         <section>   
-            <div class="container">
+            <div class="_container">
                 <div id = "bascet_vue">
 
                     <div class = "bascet_content" >

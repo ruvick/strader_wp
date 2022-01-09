@@ -1,12 +1,11 @@
-				
-<div class="prod-card__body d-flex">
-	<a href="<?echo get_the_permalink(get_the_ID());?>" class="prod-card__link">
-		<img src="<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" alt="<? the_title();?>"> 
+<div class="catalog-card-column">
+	<a href="<?echo get_the_permalink(get_the_ID());?>" class="card card-pr">
+		<div class="card__img">
+			<img src="<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" alt="<? the_title();?>"> 
+		</div>
+		<h6 class="card__title card-pr__title"><? the_title();?></h6>
+		<span class="card-pr__availability">В наличии, более 3 шт.</span>
+		<p class="card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
+		<!-- <span class="card__sticker">15%</span> -->
 	</a>
-
-	<div class="prod-card__text d-flex">
-		<h4><? the_title();?></h4>
-		<p class="prod-card__price"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> руб.</p>
-	</div>
-	<a href="<?echo get_the_permalink(get_the_ID());?>" class="prod-card__btn btn">Подробнее</a>
 </div>
