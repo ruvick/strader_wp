@@ -11,7 +11,7 @@
 						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
 					}
 				?> 
-    		<h1 class="header-sec__title"><?php single_cat_title( '', true );?></h1>
+    		<h1 class="header-sec__title">Продукты</h1>
   		</div>
 		</section>
 
@@ -218,24 +218,24 @@
 
     </div>
 
-    <nav class="pagination catalog-sec__pagination d-flex">
+    <!-- <nav class="pagination catalog-sec__pagination d-flex">
       <div class="pagination__nav-links d-flex">
         <a class="pagination__back" href="#"></a>
         <span class="pagination__numbers">1</span>
         <a class="pagination__numbers current" href="#">2</a>
         <a class="pagination__numbers" href="#">3</a>
-        <a class="pagination__numbers" href="#">4</a>
+        <a class="pagination__numbers" href="#">4</a> -->
 <!-- 							<div class="pagination__block-dot d-flex">
           <span class="pagination__dot">.</span>
           <span class="pagination__dot">.</span>
           <span class="pagination__dot">.</span>
         </div> -->
-        <a class="pagination__numbers" href="#">5</a>
+        <!-- <a class="pagination__numbers" href="#">5</a>
         <a class="pagination__next" href="#"></a>
       </div>
-    </nav>
+    </nav> -->
 
-		<!-- <?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?> -->
+		<?php if ( function_exists( 'wp_corenavi' ) ) wp_corenavi(); ?>
 
   </div>
 </section>

@@ -6,6 +6,9 @@
 		<h6 class="card__title card-pr__title"><? the_title();?></h6>
 		<span class="card-pr__availability">В наличии, более 3 шт.</span>
 		<p class="card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
-		<!-- <span class="card__sticker">15%</span> -->
+		<? $sticker = carbon_get_post_meta(get_the_ID(),"offer_sticker");
+    	if (!empty($sticker)) {?>
+			<span class="card__sticker"><?echo $sticker;?></span>
+		<?}?>
 	</a>
 </div>

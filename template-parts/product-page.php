@@ -5,6 +5,9 @@
 	  </div>
 	  <h6 class="card__title"><? the_title();?></h6>
 	  <p class="card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
-	  <!-- <span class="card__sticker">15%</span> -->
+		<? $sticker = carbon_get_post_meta(get_the_ID(),"offer_sticker");
+    	if (!empty($sticker)) {?>
+			<span class="card__sticker"><?echo $sticker;?></span>
+		<?}?>
   </a>
 </div>

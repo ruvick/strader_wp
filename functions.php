@@ -202,41 +202,19 @@ function aj_fnc()
 
 
 // Пагинация
-// function wp_corenavi() {
-//   global $wp_query;
-//   $total = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
-//   $a['total'] = $total;
-//   $a['mid_size'] = 3; // сколько ссылок показывать слева и справа от текущей
-//   $a['end_size'] = 1; // сколько ссылок показывать в начале и в конце
-//   $a['prev_text'] = ''; // текст ссылки "Предыдущая страница"
-//   $a['next_text'] = ''; // текст ссылки "Следующая страница"
+function wp_corenavi() {
+  global $wp_query;
+  $total = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+  $a['total'] = $total;
+  $a['mid_size'] = 3; // сколько ссылок показывать слева и справа от текущей
+  $a['end_size'] = 1; // сколько ссылок показывать в начале и в конце
+  $a['prev_text'] = ''; // текст ссылки "Предыдущая страница"
+  $a['next_text'] = ''; // текст ссылки "Следующая страница"
 
-//   if ( $total > 1 ) echo '<nav class="pagination">';
-//   echo paginate_links( $a );
-//   if ( $total > 1 ) echo '</nav>';
-// }
-
-
-/* Отправка почты
-		
-			$headers = array(
-				'From: Сайт '.COMPANY_NAME.' <MAIL_RESEND>',
-				'content-type: text/html',
-			);
-		
-			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
-			
-			$adr_to_send = <Присваиваем поле карбона c адресами для отправки>;
-			$mail_content = "<Тело письма>";
-			$mail_them = "<Тема письма>";
-
-			if (wp_mail($adr_to_send, $mail_them, $mail_content, $headers)) {
-				wp_die(json_encode(array("send" => true )));
-			}
-			else {
-				wp_die( 'Ошибка отправки!', '', 403 );
-			}
-	*/
+  if ( $total > 1 ) echo '<nav class="pagination catalog-sec__pagination d-flex">';
+  echo paginate_links( $a );
+  if ( $total > 1 ) echo '</nav>';
+}
 
 
 /*	Заготовка шорткода
