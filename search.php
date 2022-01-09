@@ -92,12 +92,12 @@ get_header(); ?>
 				// echo "</pre>";
 			?>
 
-			<div class="prod-card d-flex">
+			<div class="populars__card">
 
 				<?php
 				while(have_posts()):
 					the_post();
-					get_template_part('template-parts/product-elem');  
+					get_template_part('template-parts/product-page');  
 				endwhile;
 				?>
 
