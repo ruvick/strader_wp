@@ -75,14 +75,14 @@ get_header(); ?>
               <div class="product-sec__info-form-quantity quantity">
                 <div class="product-sec__info-form-quantity-button quantity__button quantity__button_minus"></div>
                 <div class="quantity__input">
-                  <input autocomplete="off" type="number" name="form[]" value="1">
+                  <input id="pageNumeric" autocomplete="off" type="number" name="form[]" value="1">
                 </div>
                 <div class="quantity__button quantity__button_plus"></div>
               </div>
             </div>
           </form>
 
-          <button class="product-sec__info-btn-bascet button" id = "btn__to-card" onclick = "add_tocart(this, 0); return false;"
+          <button class="product-sec__info-btn-bascet button" id = "btn__to-card" onclick = "add_tocart(this, document.getElementById('pageNumeric').value); return false;"
             data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
 						data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
 						data-size = ""
@@ -90,7 +90,7 @@ get_header(); ?>
             data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
             data-name = "<? echo  get_the_title();?>"
             data-count = "1"
-            data-picture = "<?php echo wp_get_attachment_image_src($item['gal_img'], 'large')[0];?>" >
+            data-picture = "<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" >
             В корзину
           </button>
           <button class="product-sec__info-btn-pay-click button">Купить в 1 клик</button>

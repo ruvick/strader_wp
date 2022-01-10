@@ -3459,7 +3459,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
-  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0LjYxOSIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgNC42MTkgNCI+DQogIDxnIGlkPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjF81OSIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCA1OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDg2LjYzOCAtMjEuMjI3KSI+DQogICAgPGcgaWQ9ItCh0LPRgNGD0L/Qv9C40YDQvtCy0LDRgtGMXzU4IiBkYXRhLW5hbWU9ItCh0LPRgNGD0L/Qv9C40YDQvtCy0LDRgtGMIDU4Ij4NCiAgICAgIDxwYXRoIGlkPSLQmtC+0L3RgtGD0YBfNTEiIGRhdGEtbmFtZT0i0JrQvtC90YLRg9GAIDUxIiBkPSJNLTQ4NC4zMjgsMjEuMjI3aDIuMzA5bC0xLjE1NSwyLTEuMTU1LDItMS4xNTUtMi0xLjE1NS0yWiIgZmlsbD0iIzE2MTYxNSIvPg0KICAgIDwvZz4NCiAgPC9nPg0KPC9zdmc+DQo=");
+  /* background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0LjYxOSIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgNC42MTkgNCI+DQogIDxnIGlkPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjF81OSIgZGF0YS1uYW1lPSLQodCz0YDRg9C/0L/QuNGA0L7QstCw0YLRjCA1OSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDg2LjYzOCAtMjEuMjI3KSI+DQogICAgPGcgaWQ9ItCh0LPRgNGD0L/Qv9C40YDQvtCy0LDRgtGMXzU4IiBkYXRhLW5hbWU9ItCh0LPRgNGD0L/Qv9C40YDQvtCy0LDRgtGMIDU4Ij4NCiAgICAgIDxwYXRoIGlkPSLQmtC+0L3RgtGD0YBfNTEiIGRhdGEtbmFtZT0i0JrQvtC90YLRg9GAIDUxIiBkPSJNLTQ4NC4zMjgsMjEuMjI3aDIuMzA5bC0xLjE1NSwyLTEuMTU1LDItMS4xNTUtMi0xLjE1NS0yWiIgZmlsbD0iIzE2MTYxNSIvPg0KICAgIDwvZz4NCiAgPC9nPg0KPC9zdmc+DQo="); */
 }
 
 .header__top-popup {
@@ -5141,11 +5141,12 @@ input[type="checkbox"],
   height: 100%;
   margin: 0; }
 .bascet-form__btn {
-  width: 180px;
+  /* width: 180px;
   height: 40px;
   background: #65B965;
-  border-radius: 5px;
-  color: #fff; }
+  border-radius: 5px; */
+  /* color: #fff;  */
+}
 /* Оформление корзины End */
 
 
