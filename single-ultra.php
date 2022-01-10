@@ -105,12 +105,13 @@ get_header(); ?>
       <div class="product-sec__descp-table">
         <h6 class="product-sec__descp-table-title">Характеристики:</h6>
         <div class="product-sec__descp-table-flex">
-          <ul class="product-sec__descp-table-list">
+          <?echo carbon_get_post_meta(get_the_ID(),"offer_smile_charect"); ?>
+          <!-- <ul class="product-sec__descp-table-list">
             <li class="product-sec__descp-table-list-item">Струна Е/Ми: сталь, диаметр 0.28 мм, натяжение 7,3 кг.</li>
             <li class="product-sec__descp-table-list-item">Струна А/Ля: алюминиевый сплав, диаметр 0.59 мм, натяжение 6,3 кг.</li>
             <li class="product-sec__descp-table-list-item">Струна D/Ре: алюминиевый сплав, диаметр 0.71 мм, натяжение 5,3 кг.</li>
             <li class="product-sec__descp-table-list-item">Струна G/Соль: нейзильбер, диаметр 0.74 мм., натяжение 4,9 кг.</li>
-          </ul>
+          </ul> -->
           <ul class="product-sec__descp-table-list product-sec__descp-table-list_right">
             <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Размер <p>1/2</p></li>
             <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна (фирма) <p>Австрия</p></li>
@@ -126,72 +127,28 @@ get_header(); ?>
   <div class="_container">
     <h2 class="similar-prod__title">Похожие товары</h2>
     <div class="similar-prod__card sale__card">
-      
-      <div class="card-column">
-        <a href="#" class="card card-pr">
-          <div class="card__img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1641456649011" alt=""></picture>
-          </div>
-          <h6 class="card__title card-pr__title">
-            Струны для скрипки 
-            Thomastik Dominant 135 1/8
-            (4 шт)
-          </h6>
-          <span class="card-pr__availability">В наличии, более 3 шт.</span>
-          <p class="card__price rub">3650 </p>
-          <!-- <span class="card__sticker">15%</span> -->
-        </a>
-      </div>
+      <?
+					$args = array(
+						'posts_per_page' => 5,
+						'post_type' => 'ultra',
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'ultracat',
+								'field' => 'id',
+								'terms' => array(3)
+							)
+						)
+					);
+					$query = new WP_Query($args);
 
-      <div class="card-column">
-        <a href="#" class="card card-pr">
-          <div class="card__img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/01.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/01.jpg?_v=1641456649011" alt=""></picture>
-          </div>
-          <h6 class="card__title card-pr__title">
-            Струны для скрипки 
-            Thomastik Dominant 135 1/8
-            (4 шт)
-          </h6>
-          <span class="card-pr__availability">В наличии, более 3 шт.</span>
-          <p class="card__price rub">3650 </p>
-          <!-- <span class="card__sticker">15%</span> -->
-        </a>
-      </div>
+					foreach( $query->posts as $post ){
+						$query->the_post();
+						get_template_part('template-parts/product-page');
+					}  
+					wp_reset_postdata(); 
+			?>
 
-      <div class="card-column">
-        <a href="#" class="card card-pr">
-          <div class="card__img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/02.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/02.jpg?_v=1641456649011" alt=""></picture>
-          </div>
-          <h6 class="card__title card-pr__title">
-            Струны для скрипки 
-            Thomastik Dominant 135 1/8
-            (4 шт)
-          </h6>
-          <span class="card-pr__availability">В наличии, более 3 шт.</span>
-          <p class="card__price rub">3650 </p>
-          <!-- <span class="card__sticker">15%</span> -->
-        </a>
-      </div>
-
-      <div class="card-column">
-        <a href="#" class="card card-pr">
-          <div class="card__img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/03.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/03.jpg?_v=1641456649011" alt=""></picture>
-          </div>
-          <h6 class="card__title card-pr__title">
-            Струны для скрипки 
-            Thomastik Dominant 135 1/8
-            (4 шт)
-          </h6>
-          <span class="card-pr__availability">В наличии, более 3 шт.</span>
-          <p class="card__price rub">3650 </p>
-          <!-- <span class="card__sticker">15%</span> -->
-        </a>
-      </div>
-
-      <div class="card-column">
+      <!-- <div class="card-column">
         <a href="#" class="card card-pr">
           <div class="card__img">
             <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/04.jpg?_v=1641456649011" alt=""></picture>
@@ -203,9 +160,9 @@ get_header(); ?>
           </h6>
           <span class="card-pr__availability">В наличии, более 3 шт.</span>
           <p class="card__price rub">3650 </p>
-          <!-- <span class="card__sticker">15%</span> -->
+          <span class="card__sticker">15%</span>
         </a>
-      </div>
+      </div> -->
 
     </div>
   </div>

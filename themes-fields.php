@@ -112,7 +112,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
     Container::make('post_meta', 'ultra_product_cr', 'Характеристики товара')
     ->show_on_post_type(array( 'ultra'))
       ->add_fields(array(   
-      Field::make('textarea', 'offer_smile_descr', 'Краткое описание')->set_width(100),
+      Field::make('rich_text', 'offer_smile_charect', 'Харрактеристики')->set_width(100),
       // Field::make('text', 'offer_name', 'Название товара')->set_width(30),
       // Field::make('text', 'offer_label', 'Метка на товаре')->set_width(30),
       // Field::make('text', 'offer_weight', 'Вес')->set_width(50),

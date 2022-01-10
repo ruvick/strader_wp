@@ -4773,8 +4773,15 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .product-sec__descp-table-list {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  margin-right: 15px;
+}
+
+.product-sec__descp-table-flex ul:first-child {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
   margin-right: 15px;
 }
 
@@ -4782,6 +4789,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin: 0px 0px 0px 0px;
 }
 
+.product-sec__descp-table-flex ul li,
 .product-sec__descp-table-list-item {
   line-height: 24px;
 }
