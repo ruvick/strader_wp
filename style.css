@@ -5354,6 +5354,15 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   margin: 0;
 }
 
+.product-sl .slider__slide {
+  position: relative;
+}
+
+.product-sl-paggination {
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+}
 
 
 
