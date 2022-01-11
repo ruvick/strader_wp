@@ -31,7 +31,6 @@ get_header(); ?>
       <div class="product-sec__img">
         <div class="slider__wrap">
           <div class="slider__container _container">
-            <!-- Слайдер с техническим классом _swiper -->
             <div class="product-sl _swiper d-flex">
               <?
 						    $pict = carbon_get_the_post_meta('offer_picture');
@@ -139,8 +138,8 @@ get_header(); ?>
             <li class="product-sec__descp-table-list-item">Струна G/Соль: нейзильбер, диаметр 0.74 мм., натяжение 4,9 кг.</li>
           </ul> -->
           <ul class="product-sec__descp-table-list product-sec__descp-table-list_right">
-            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Размер <p>1/2</p></li>
-            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна (фирма) <p>Австрия</p></li>
+            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Размер <p><?echo carbon_get_post_meta(get_the_ID(),"offer_size"); ?></p></li>
+            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна (фирма) <p><?echo carbon_get_post_meta(get_the_ID(),"offer_country"); ?></p></li>
           </ul>
         </div>
       </div>
