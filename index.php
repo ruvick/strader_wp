@@ -38,35 +38,23 @@
 <section id="ranges" class="ranges">
 	<div class="_container">
 		<div class="ranges__wrap">
-			
-			<div class="ranges__card ranges__card_01">
-				<div class="ranges__card-nuar_blk nuar_blk"></div>
-				<h3 class="ranges__card-title">Инструменты</h3>
-			</div>
-
-			<div class="ranges__card ranges__card_02">
-				<div class="ranges__card-nuar_blk nuar_blk"></div>
-				<h3 class="ranges__card-title">
-					Струны для <br>
-					инструментов
-				</h3>
-			</div>
-
-			<div class="ranges__card ranges__card_03">
-				<div class="ranges__card-nuar_blk nuar_blk"></div>
-				<h3 class="ranges__card-title">Новые акции</h3>
-			</div>
-
-			<div class="ranges__card ranges__card_04">
-				<div class="ranges__card-nuar_blk nuar_blk"></div>
-				<h3 class="ranges__card-title">Аксессуары</h3>
-			</div>
-
-			<div class="ranges__card ranges__card_05">
-				<div class="ranges__card-nuar_blk nuar_blk"></div>
-				<h3 class="ranges__card-title">Электроскрипки</h3>
-			</div>
-
+			<?php $stock = carbon_get_theme_option('complex_sections');
+			if (!empty($stock)) : ?>
+				<?php foreach ($stock as $item) : ?>
+					<?php if (!empty($item['checkbox_stock'])) {
+						echo'<a href="' . $item['link_sections'] . '" class="ranges__card ranges__card_04" style="background-image: url(' . wp_get_attachment_image_src($item["img_sections"], "full")[0] . ');">
+									<div class="ranges__card-nuar_blk nuar_blk"></div>
+									<h3 class="ranges__card-title">' . $item['text_sections'] . '</h3>
+								</a>';
+					} else {
+						echo '<a href="' . $item['link_sections'] . '" class="ranges__card" style="background-image: url(' . wp_get_attachment_image_src($item["img_sections"], "full")[0] . ');">
+										<div class="ranges__card-nuar_blk nuar_blk"></div>
+										<h3 class="ranges__card-title">' . $item['text_sections'] . '</h3>
+									</a>';
+					}
+					?>
+				<?php endforeach; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

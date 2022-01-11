@@ -4219,8 +4219,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .ranges__card_04 {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 49%;
-          flex: 0 1 49%;
+  -ms-flex: 0 1 49%;
+  flex: 0 1 49%;
   height: 300px;
 }
 
@@ -4229,13 +4229,13 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .ranges__card_05 {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 49%;
-          flex: 0 1 49%;
+  -ms-flex: 0 1 49%;
+  flex: 0 1 49%;
   height: 300px;
 }
 
 .ranges__card_04 .ranges__card-title {
-  color: #000;
+  /* color: #000; */
   margin-left: auto;
 }
 
