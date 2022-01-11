@@ -82,6 +82,11 @@
       'container_class' => 'menu__list','container' => false )); ?>  -->
     </div>
   </div>
+  <nav class="menu-main">
+	<div class="menu-main__df d-flex">
+		<?php wp_nav_menu( array('theme_location' => 'menu_cat', 'container' => false )); ?>	
+	</div>
+</nav>
 </header>
 
 <!-- Мобильное меню -->

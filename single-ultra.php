@@ -128,7 +128,7 @@ get_header(); ?>
     <div class="product-sec__descp">
       <h5 class="product-sec__descp-title">Описание</h5>
       <div class="product-sec__descp-table">
-        <h6 class="product-sec__descp-table-title">Характеристики:</h6>
+        <!-- <h6 class="product-sec__descp-table-title">Характеристики:</h6> -->
         <div class="product-sec__descp-table-flex">
           <?echo carbon_get_post_meta(get_the_ID(),"offer_smile_charect"); ?>
           <!-- <ul class="product-sec__descp-table-list">

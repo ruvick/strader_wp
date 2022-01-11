@@ -1026,7 +1026,7 @@ body.ie ._ibg img {
 .swiper-button {
   position: absolute;
   top: 48%;
-  z-index: 5000;
+  z-index: 500;
   width: 42.79px;
   height: 42.79px;
   background: #fff;
@@ -5364,10 +5364,60 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   bottom: 10%;
 }
 
-
-
-
-
+.menu-main {
+  display: none;
+  position: absolute;
+  z-index: 5000;
+  background: #fff;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  max-width: 1440px;
+  width: 100%;
+  overflow: auto;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0 3px 8px 0 rgb(0 0 0 / 28%);
+  box-shadow: 0 3px 8px 0 rgb(0 0 0 / 28%);
+}
+.menu-main__df {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.menu-main #menu-ves-katalog {
+  background: #edeeef;
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+}
+#menu-ves-katalog li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 43px;
+  color: #000;
+  font-weight: 900;
+  font-size: 16px;
+}
+#menu-ves-katalog li ul {
+  padding-left: 10px;
+}
+#menu-ves-katalog li ul a {
+  height: auto;
+  margin: 5px 0;
+  font-weight: 300;
+  font-size: 14px;
+}
 
 
 

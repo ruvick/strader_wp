@@ -202,7 +202,7 @@ let sl_Index = new Swiper('.sl-index', {
 	slidesPerView: 1,
 	spaceBetween: 0,
 	autoHeight: true,
-	speed: 2000,
+	speed: 1000,
 	//touchRatio: 0,
 	//simulateTouch: false,
 	loop: true,
@@ -1107,6 +1107,7 @@ animate({
 const iconMenu = document.querySelector(".icon-menu");
 const body = document.querySelector("body");
 const menuBody = document.querySelector(".mob-menu");
+const menuMain = document.querySelector(".menu-main");
 const menuListItemElems = document.querySelector(".mob-menu__list");
 const mobsearch = document.querySelector(".header__mob-search-btn");
 const headsearch = document.querySelector(".header__search-mob");
@@ -2460,6 +2461,21 @@ document.addEventListener("DOMContentLoaded", () => {
 // Файлы Java Script End -----------------------------------------------------------------------------------------------------
 
 $ = jQuery;
+
+if (document.body.clientWidth > 1024) {
+
+	function hideMenu() {
+		$('.menu-main').slideUp(600);
+	}
+	function showMenu() {
+		$('.menu-main').slideDown(600);
+	}
+
+	$(document).ready(function () {
+		$(".menu-list__link_cat").on("mouseover", showMenu);
+		$(".menu-main ").on("mouseleave", hideMenu);
+	});
+}
 
 $(".fancybox").fancybox();
 
