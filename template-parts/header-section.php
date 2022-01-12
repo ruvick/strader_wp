@@ -66,7 +66,7 @@
         </a>
       </div>
       <div class="header__center-icons">
-        <a href="#" class="header__center-icons-item icons-item-02">
+        <a href="<?php echo get_permalink(219);?>" class="header__center-icons-item icons-item-02">
           <p class="header__center-icons-name">Профиль</p>
         </a>
       </div>

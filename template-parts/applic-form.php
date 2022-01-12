@@ -11,7 +11,7 @@
           <input autocomplete="off" type="text" name="name" data-error="Заполните поле" data-value="Заявка отправленна"
 					class="applic__block-form-input input _name SendetMsg SendetMsg-inpt" style="display:none;" disabled>
 					<input autocomplete="off" type="text" name="tel" data-error="Заполните поля" data-value="+7 (___) ___-__-___"
-					class="applic__block-form-input input _phone _phone _req _tel">
+					class="applic__block-form-input input _phone _req _tel">
 					<button type="button" class="applic__block-form-btn form__btn btn u_send">Оставить заявку</button>
 				</div>
 				<p class="applic__block-footnote">* Отправляя заявку, вы соглашаетесь на обработку персональных данных</p>
