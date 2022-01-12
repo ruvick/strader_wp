@@ -3745,6 +3745,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   font-weight: 500;
 }
 
+.menu-item-211 a:before,
 .menu-list__link_cat:before {
   content: "";
   float: left;
@@ -3762,6 +3763,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .menu-list__link_sale:after {
+  display: none;
+}
+
+.menu-item-211 a:after,
+.menu-item-218 a:after {
   display: none;
 }
 

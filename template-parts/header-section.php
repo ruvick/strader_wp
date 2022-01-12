@@ -22,10 +22,29 @@
     <div class="header__center-address">
       <p class="header__center-address-text">Ваш город</p>
       <select name="form[]" id="" class="header__center-address-select catalog-header__select">
-        <option value="1">г. Москва</option>
-        <option value="2" option="">г. Москва</option>
-        <option value="3" option="">г. Москва</option>
-        <option value="3" option="">г. Москва</option>
+        <option value="1">г.Москва</option>
+        <option value="2" option="">г.Санкт-Петербург</option>
+        <option value="3" option="">г.Новосибирск</option>
+        <option value="4" option="">г.Екатеринбург</option>
+
+        <option value="5" option="">г.Казань</option>
+        <option value="6" option="">г.Нижний Новгород</option>
+        <option value="7" option="">г.Челябинск</option>
+
+        <option value="8" option="">г.Омск</option>
+        <option value="9" option="">г.Самара</option>
+        <option value="10" option="">г.Ростов-на-Дону</option>
+
+        <option value="11" option="">г.Уфа</option>
+        <option value="12" option="">г.Красноярск</option>
+        <option value="13" option="">г.Пермь</option>
+        <option value="14" option="">г.Воронеж</option>
+        <option value="15" option="">г.Волгоград</option>
+        <option value="16" option="">г.Краснодар</option>
+        <option value="17" option="">г.Саратов</option>
+        <option value="18" option="">г.Тюмень</option>
+        <option value="19" option="">г.Тольятти</option>
+        <option value="20" option="">г.Ижевск</option>
       </select>
     </div>
     <div class="search header__search">
@@ -68,41 +87,21 @@
 
 <div class="header__menu">
   <div class="header__menu-container _container">
-    <ul class="header__menu-list menu-list d-flex">
-      <li class="menu-list__item"><a href="#" class="menu-list__link menu-list__link_cat">Каталог</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link">Струны</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link">Аксессуары</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link">Футляры и чехлы</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link">Инструменты</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link">Смычки</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link">Пульты</a></li>
-      <li class="menu-list__item"><a href="#" class="menu-list__link menu-list__link_sale">Акции %</a></li>
-    </ul>
-    <!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'menu__list',
-      'container_class' => 'menu__list','container' => false )); ?>  -->
+    <?php wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'header__menu-list menu-list d-flex',
+      'container_class' => 'header__menu-list menu-list d-flex','container' => false )); ?>
     </div>
   </div>
   <nav class="menu-main">
 	<div class="menu-main__df d-flex">
-		<?php wp_nav_menu( array('theme_location' => 'menu_cat', 'container' => false )); ?>	
+		<?php wp_nav_menu( array('theme_location' => 'menu_cat_hover', 'container' => false )); ?>	
 	</div>
 </nav>
 </header>
 
 <!-- Мобильное меню -->
 <div class="mob-menu header__mob-menu">
-  <ul class="mob-menu__list">
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Каталог</a></li> 
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Струны</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Аксессуары</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Футляры и чехлы</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Инструменты</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Смычки</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Пульты</a></li>
-    <li class="mob-menu__item"><a href="#" class="mob-menu__link">Акции %</a></li>
-  </ul>
-<!-- <?php wp_nav_menu( array('theme_location' => 'menu_main','menu_class' => 'mob-menu__list',
-  'container_class' => 'mob-menu__list','container' => false )); ?>  -->
+  <?php wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'mob-menu__list',
+    'container_class' => 'mob-menu__list','container' => false )); ?>
   <a href="#callback" class="header__popup-link header__popup-link_mob _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
 </div>
 

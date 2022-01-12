@@ -33,11 +33,9 @@ function crb_load()
 
 add_action('after_setup_theme', function () {
 	register_nav_menus([
-		// 'menu_hot' => 'Меню актуальных предложений (рядом с каталогом)',
-		'menu_main' => 'Меню основное',
-		'menu_cat' => 'Меню каталога',
-		'menu_company' => 'Меню о компании (в подвале)',
-		// 'menu_corp' => 'Общекорпоративное меню (верхняя шапка)', 
+		'menu_main' => 'Меню основное', 
+		'menu_cat' => 'Меню каталога', 
+		'menu_cat_hover' => 'Всплывающее меню каталога',
 	]);
 });
 
@@ -47,13 +45,16 @@ add_filter('nav_menu_css_class', 'change_menu_item_css_classes', 10, 4);
 
 function change_menu_item_css_classes($classes, $item, $args, $depth)
 {
-	if ($item->ID  && 'menu_cat' === $args->theme_location) {
-		$classes[] = 'footer-top-wrap-list-item-sublist-item';
-	}
+	// if( 218 === $item->ID  && 'menu_cat' === $args->theme_location ){ 
+	// 	$classes[] = 'menu-list__link menu-list__link_sale';
+	// }
+	// if ($item->ID  && 'menu_cat' === $args->theme_location) {
+	// 	$classes[] = 'footer-top-wrap-list-item-sublist-item';
+	// }
 
-	if ($item->ID  && 'menu_company' === $args->theme_location) {
-		$classes[] = 'footer-top-wrap-list-item-sublist-item';
-	}
+	// if ($item->ID  && 'menu_company' === $args->theme_location) {
+	// 	$classes[] = 'footer-top-wrap-list-item-sublist-item';
+	// }
 
 	if ($item->ID  && 'menu_main' === $args->theme_location) {
 		$classes[] = 'header__top-list-item';
@@ -61,6 +62,7 @@ function change_menu_item_css_classes($classes, $item, $args, $depth)
 
 	return $classes;
 }
+
 
 
 // Добавляет атрибут class к ссылке в пунктах меню menu_main
@@ -74,6 +76,13 @@ function filter_nav_menu_link_attributes($atts, $item, $args, $depth)
 			$atts['class'] .= ' menu-link--active'; //активный пункт меню
 		}
 	}
+	// if (in_array($args->theme_location, ['menu_cat'])) {
+	// 	$atts['class'] = 'menu-list__link_sale';
+
+	// 	if ($item->current) {
+	// 		$atts['class'] .= ' menu-link--active'; //активный пункт меню
+	// 	}
+	// }
 	return $atts;
 }
 
