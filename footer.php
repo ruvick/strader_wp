@@ -7,15 +7,8 @@
 
 			<div class="footer__column">
 				<h6 class="footer__column-title">Каталог товаров</h6>
-				<ul class="footer__menu"> 
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Струны</a></li> 
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Аксессуары</a></li>
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Футляры и чехлы</a></li>
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Инструменты</a></li>
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Смычки</a></li>
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Пульты</a></li>
-					<li class="footer__menu-item"><a href="#" class="footer__menu-item-link">Акции %</a></li>
-				</ul>
+				<?php wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'footer__menu',
+      		'container_class' => 'footer__menu','container' => false )); ?>
 			</div>
 
 			<div class="footer__column">

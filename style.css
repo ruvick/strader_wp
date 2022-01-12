@@ -5425,6 +5425,16 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   font-size: 14px;
 }
 
+.footer__menu .menu-item-211 a:before {
+  display: none;
+}
+
+
+
+
+
+
+
 
 
 

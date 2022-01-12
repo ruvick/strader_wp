@@ -2472,7 +2472,7 @@ if (document.body.clientWidth > 1024) {
 	}
 
 	$(document).ready(function () {
-		$(".menu-list__link_cat, .menu-item-211").on("mouseover", showMenu);
+		$(".header__menu .menu-item-211").on("mouseover", showMenu);
 		$(".menu-main ").on("mouseleave", hideMenu);
 	});
 }
