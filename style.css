@@ -5429,10 +5429,31 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   display: none;
 }
 
-
-
-
-
+.reviews__form {
+  max-width: 350px;
+  width: 100%;
+}
+.reviews__form-input {
+  border: 1px solid grey;
+  margin-bottom: 10px;
+}
+.reviews__form-input:last-child {
+  margin-bottom: 0;
+}
+.authoriz__form-wrapper-btn {
+  margin-top: 25px;
+}
+.authoriz__form-btn {
+  margin-right: 10px;
+}
+.authoriz__form-btn:last-child {
+  margin-right: 0;
+}
+.authoriz__form-btn_register {
+  color: red;
+  background: #fff;
+  border: 1px solid red;
+}
 
 
 
