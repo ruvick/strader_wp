@@ -10,6 +10,16 @@ function getCookie(name) {
 }
 
 
+function inBascetCounting() {
+	cart = JSON.parse(localStorage.getItem("cart"));
+	if (cart == null) cart = [];
+	for (let i = 0; i < cart.length; i++) {
+		let element = document.getElementById('bcounter_' + cart[i].sku);
+		if (element != null)
+			element.innerHTML = "(" + cart[i].count + ")";
+	}
+}
+
 function number_format() {
 	let elements = document.querySelectorAll('.price_formator');
 	for (let elem of elements) {
@@ -18,15 +28,23 @@ function number_format() {
 	}
 }
 
-function set_size(sizeName) {
-	let btn = document.getElementById('btn__to-card');
-	btn.dataset.size = sizeName;
-	console.log(sizeName);
-}
+//Маска для телефона
+// let mascedPhoneElem = document.querySelectorAll('input[type=tel]');
+// console.log(mascedPhoneElem);
+// if (mascedPhoneElem != undefined)
+// 	for (let elem of mascedPhoneElem) {
+// 			IMask(elem, {
+// 					mask: '+{7}(000)000-00-00',
+// 					lazy: true,  // make placeholder always visible
+// 					placeholderChar: '_'     // defaults to '_'
+// 			});
+// 	}
+
 
 document.addEventListener("DOMContentLoaded", () => {
 	number_format();
 	cart_recalc();
+	inBascetCounting();
 });
 
 //--- Корзина -------------------------------------------------------------------------------------------------------------
@@ -1149,78 +1167,21 @@ window.addEventListener('click', e => { // при клике в любом ме�
 })
 
 // Плавная прокрутка
-const smotScrollElems = document.querySelectorAll('a[href^="#"]:not(a[href="#"])');
+// const smotScrollElems = document.querySelectorAll('a[href^="#"]:not(a[href="#"])'); 
 
-smotScrollElems.forEach(link => {
-	link.addEventListener('click', (event) => {
-		event.preventDefault()
-		console.log(event);
+// smotScrollElems.forEach(link => {
+// 	link.addEventListener('click', (event) => {
+// 		event.preventDefault()
+// 		console.log(event);
 
-		const id = link.getAttribute('href').substring(1)
-		console.log('id : ', id);
+// 		const id = link.getAttribute('href').substring(1)
+// 		console.log('id : ', id);
 
-		document.getElementById(id).scrollIntoView({
-			behavior: 'smooth'
-		});
-	})
-});
-
-
-// Полоса прокрутки в шапке
-const scrollProgress = document.getElementById('scroll-progress');
-const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-
-window.addEventListener('scroll', () => {
-	const scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-	scrollProgress.style.width = `${(scrollTop / height) * 100}%`;
-});
-
-
-// Ползунок выбора цены
-const priceEl = document.querySelector(".price");
-
-function changePrice(price) {
-	priceEl.innerText = price;
-	console.log(price);
-};
-
-
-// Подсказки
-tippy('._tippy', {
-	content: "Подсказка",
-});
-
-
-// Поочередное открытие нескольких блоков меню, табы, либо что то еще
-const BarIconElems = document.querySelectorAll('.sidebar__menu-open');
-const BarLinkIconElems = document.querySelectorAll('.sidebar__menu-icon');
-const BarSubMenuElems = document.querySelectorAll('.sidebar__submenu');
-
-BarIconElems.forEach((btn, index) => {
-	btn.addEventListener('click', () => {
-
-		if (!btn.classList.contains('sidebar__menu-icon_active')) {
-
-			BarSubMenuElems.forEach((BarSubMenuElem) => {
-				BarSubMenuElem.classList.remove('active')
-			});
-			BarIconElems.forEach((BarIconElem) => {
-				BarIconElem.classList.remove('sidebar__menu-icon_active')
-			});
-			BarLinkIconElems.forEach((BarLinkIconElem) => {
-				BarLinkIconElem.classList.remove('sidebar__menu-icon_active')
-			});
-
-			BarSubMenuElems[index].classList.add('active')
-			BarLinkIconElems[index].classList.add('sidebar__menu-icon_active')
-			btn.classList.add('sidebar__menu-icon_active')
-		} else {
-			BarSubMenuElems[index].classList.remove('active')
-			BarLinkIconElems[index].classList.remove('sidebar__menu-icon_active')
-			btn.classList.remove('sidebar__menu-icon_active')
-		}
-	})
-})
+// 		document.getElementById(id).scrollIntoView({
+// 			behavior: 'smooth'
+// 		});
+// 	})
+// });
 
 
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
@@ -2478,6 +2439,8 @@ if (document.body.clientWidth > 1024) {
 }
 
 $(".fancybox").fancybox();
+
+
 
 // Файлы jQuery---------------------------------------------------------------------------------------------------------------
 

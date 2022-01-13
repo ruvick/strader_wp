@@ -9,7 +9,7 @@
 
 <?php get_template_part('template-parts/header-section');?>
 
-	<main id="primary" class="page site-main"> 
+	<main id="primary" class="page site-main main"> 
 
 		<section class="header-sec">
   		<div class="_container">

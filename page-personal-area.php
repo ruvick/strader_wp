@@ -9,22 +9,22 @@
 
 <?php get_template_part('template-parts/header-section');?>
 
-  <main id="primary" class="page site-main main"> 
+<main id="primary" class="page site-main main"> 
 
 	<template id = "autorisation">
 
-  <section class="header-sec">
-  		<div class="_container">
-				<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
-					}
-				?> 
-    		<h1 class="header-sec__title">Авторизация</h1>
-  		</div>
-		</section>
-
-		<section class = "content">
+		<section class = "header-sec-content">
+			<div class="header-sec">
+  			<div class="_container">
+					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+						}
+					?> 
+    			<h1 class="header-sec__title">Авторизация</h1>
+  			</div>
+			</div>
+		<div class="content">
 			<div class="_container">
 
 				<form action="#" class="authoriz__form reviews__form">
@@ -46,24 +46,24 @@
 				</form> 
 
 			</div>
+			</div>
 		</section>
 	</template>
 
 
 	<template id = "registration">
-
-  <section class="header-sec">
-  		<div class="_container">
-				<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
-					}
-				?> 
-    		<h1 class="header-sec__title">Регистрация</h1>
-  		</div>
-		</section>
-
-		<section class = "content">
+	<section class = "header-sec-content">
+			<div class="header-sec">
+  			<div class="_container">
+					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+						}
+					?> 
+    			<h1 class="header-sec__title">Регистрация</h1>
+  			</div>
+			</div>
+		<div class="content">
 			<div class="_container">
 
 				<form autocomplete="off" action="#" class="authoriz__form reviews__form">
@@ -84,23 +84,23 @@
 				</form> 
 
 			</div>
+			</div>
 		</section>
 	</template>
 
 	<template id = "passrec">
-
-  <section class="header-sec">
-  		<div class="_container">
-				<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
-					}
-				?> 
-    		<h1 class="header-sec__title">Восстановление пароля</h1>
-  		</div>
-		</section>
-
-		<section class = "content">
+	<section class = "header-sec-content">
+			<div class="header-sec">
+  			<div class="_container">
+					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+						}
+					?> 
+    			<h1 class="header-sec__title">Восстановление пароля</h1>
+  			</div>
+			</div>
+		<div class="content">
 			<div class="_container">
 
 				<form action="#" class="authoriz__form reviews__form">
@@ -116,25 +116,24 @@
 				</form> 
 
 			</div>
+			</div>
 		</section>
 	</template>
 	
 	<template id = "kabinet">
-
-  <section class="header-sec">
-  		<div class="_container">
-				<?php
-					if ( function_exists('yoast_breadcrumb') ) {
-						yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
-					}
-				?> 
-    		<h1 class="header-sec__title">Личный кабинет</h1>
-  		</div>
-		</section>
-
-		<section class = "personal content">
+		<section class = "header-sec-content personal">
+			<div class="header-sec">
+  			<div class="_container">
+					<?php
+						if ( function_exists('yoast_breadcrumb') ) {
+							yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );  
+						}
+					?> 
+    			<h1 class="header-sec__title">Личный кабинет</h1>
+  			</div>
+			</div>
+		<div class="content">
 			<div class="_container">
-
 				<div class = "kabinet_control_panel">
 					<div class = "kabinet_register_info">
 						<span class="company_name">
@@ -191,6 +190,7 @@
 					        
 				</div>
 
+			</div>
 			</div>
 		</section>
 	</template>
