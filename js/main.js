@@ -144,6 +144,7 @@ function generatePDF() {
 function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
+
 //BildSlider
 let sliders = document.querySelectorAll('._swiper');
 if (sliders) {

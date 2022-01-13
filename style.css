@@ -5443,19 +5443,24 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .authoriz__form-wrapper-btn {
   margin-top: 25px;
 }
-.authoriz__form-btn {
-  margin-right: 10px;
+.reviews__form-btn {
+  margin-bottom: 10px;
 }
-.authoriz__form-btn:last-child {
-  margin-right: 0;
+.reviews__form-btn:last-child {
+  margin-bottom: 0;
 }
 .authoriz__form-btn_register {
   color: red;
   background: #fff;
   border: 1px solid red;
 }
-
-
+.btn_wrapper a {
+  display: block;
+  margin-top: 10px;
+}
+.messageFormBlk {
+  margin-top: 10px;
+}
 
 
 

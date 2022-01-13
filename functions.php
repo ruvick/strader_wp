@@ -173,7 +173,7 @@ function my_assets()
 	// wp_enqueue_script('slick', get_template_directory_uri() . '/js/slick.min.js', array(), $scrypt_version, true); //Слайдер
 	wp_enqueue_script('fancybox', get_template_directory_uri() . '/js/jquery.fancybox.min.js', array(), $scrypt_version, true); //fancybox
 	wp_enqueue_script('vendors', get_template_directory_uri() . '/js/vendors.min.js', array(), $scrypt_version, true); //Библиотеки
-	// wp_enqueue_script('html2pdf', get_template_directory_uri() . '/js/html2pdf.bundle.js', array(), $scrypt_version, true); //Create PDF-page 
+	// wp_enqueue_script('html2pdf', get_template_directory_uri() . '/js/html2pdf.bundle.js', array(), $scrypt_version, true); //Create PDF-page  
 
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), $scrypt_version, true); // Подключение основного скрипта в самом конце
 
@@ -462,7 +462,7 @@ function sendphone()
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 			
 			$adr_to_send = carbon_get_theme_option("as_email_send");
-			$adr_to_send = (empty($adr_to_send))?"asmi046@gmail.com,s9606741999@yandex.ru":$adr_to_send;
+			$adr_to_send = (empty($adr_to_send))?"asmi046@gmail.com":$adr_to_send;
 			
 			$zak_number = "A".date("H").date("i").date("s").rand(100,999);
 
@@ -558,7 +558,7 @@ function sendphone()
 			$mail_content .= "<strong>Комментарий:</strong> ".$_REQUEST["comment"]."<br/>";
 			// $mail_content .= "<strong>FTP:</strong> ".($ftprez)?"Загружен":"Не загружен"."<br/>";
 
-			$mail_them = "Заказ на сайте AgriBest";
+			$mail_them = "Заказ на сайте Strader";
 
 
 			
