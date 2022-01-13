@@ -41,8 +41,14 @@
 			<?php $stock = carbon_get_theme_option('complex_sections');
 			if (!empty($stock)) : ?>
 				<?php foreach ($stock as $item) : ?>
-					<?php if (!empty($item['checkbox_stock'])) {
+					<?php 
+					if (!empty($item['checkbox_stock'])) {
 						echo'<a href="' . $item['link_sections'] . '" class="ranges__card ranges__card_04" style="background-image: url(' . wp_get_attachment_image_src($item["img_sections"], "full")[0] . ');">
+									<div class="ranges__card-nuar_blk nuar_blk"></div>
+									<h3 class="ranges__card-title">' . $item['text_sections'] . '</h3>
+								</a>';
+					} elseif  (!empty($item['checkbox_stock_title'])) {
+						echo'<a href="' . $item['link_sections'] . '" class="ranges__card ranges__card_05" style="background-image: url(' . wp_get_attachment_image_src($item["img_sections"], "full")[0] . ');">
 									<div class="ranges__card-nuar_blk nuar_blk"></div>
 									<h3 class="ranges__card-title">' . $item['text_sections'] . '</h3>
 								</a>';

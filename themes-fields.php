@@ -46,7 +46,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
         Field::make('text', 'link_sections', 'Ссылка')   
         ->set_width(30),
         Field::make("checkbox", "checkbox_stock", "Большая картинка"),
-        // ->help_text('Меняет местами картинку и текст"'),
+        Field::make("checkbox", "checkbox_stock_title", "Большая картинка, заголовок слева"),
         ))
     ))
     ->add_tab('Отзывы', array(
