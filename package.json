@@ -20,6 +20,7 @@
     "send_carbon": "scp -C -r carbon-fields asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_part": "scp -C -r template-parts asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_img": "scp -r img asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_pars": "scp -r pars asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_images": "scp -r images *.svg asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_js": "scp -r js asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_css": "scp -C -r css asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
