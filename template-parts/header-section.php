@@ -60,7 +60,7 @@
     <a href="tel:84951700000" class="mob-phone-icon header__mob-phone-icon"></a>
     <div class="header__center-icons-block">
       <div class="header__center-icons">
-        <a href="#" class="header__center-icons-item icons-item-01">
+        <a href="<?php echo get_permalink(2288);?>" class="header__center-icons-item icons-item-01">
           <span class="icons-item-number icons-item-number-favorites">0</span>
           <p class="header__center-icons-name">Избранное</p>
         </a>
