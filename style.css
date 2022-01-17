@@ -4671,6 +4671,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 50px 0 15px 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      align-items: center;
 }
 
 .product-sec__info-form {
@@ -5463,6 +5464,26 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 .messageFormBlk {
   margin-top: 10px;
 }
+
+.product-sec__info-btn-favorites {
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.product-sec__info-btn-favorites:before {
+  content: "";
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0;
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNi4wNTQiIGhlaWdodD0iMjMuMjI5IiB2aWV3Qm94PSIwIDAgMjYuMDU0IDIzLjIyOSI+DQogIDxwYXRoIGlkPSLQmtC+0L3RgtGD0YBfNDgiIGRhdGEtbmFtZT0i0JrQvtC90YLRg9GAIDQ4IiBkPSJNLTQ5My4xNTIsMTAxLjQ1OWE3LjEsNy4xLDAsMCwwLTUuMjg0LTIuMyw2LjY2LDYuNjYsMCwwLDAtNC4xNTksMS40MzUsOC4zNTcsOC4zNTcsMCwwLDAtMS40OTUsMS41MSw4LjM1Nyw4LjM1NywwLDAsMC0xLjQ5NS0xLjUxLDYuNjU5LDYuNjU5LDAsMCwwLTQuMTU4LTEuNDM1LDcuMTA2LDcuMTA2LDAsMCwwLTUuMjg1LDIuMyw4LjIyNCw4LjIyNCwwLDAsMC0yLjA4OSw1LjYxNiw5Ljc0MSw5Ljc0MSwwLDAsMCwyLjU5MSw2LjM4LDU0LjIsNTQuMiwwLDAsMCw2LjM5Miw2Yy44OC43NDksMS44NzcsMS42LDIuOTExLDIuNWExLjcyMSwxLjcyMSwwLDAsMCwxLjEzMy40MjYsMS43MjEsMS43MjEsMCwwLDAsMS4xMzMtLjQyNmMxLS44NzgsMS45NzMtMS43LDIuODMzLTIuNDM4bC4wODMtLjA3MWE1NC4zNjIsNTQuMzYyLDAsMCwwLDYuMzg4LTYsOS43MzksOS43MzksMCwwLDAsMi41OS02LjM4QTguMjI0LDguMjI0LDAsMCwwLTQ5My4xNTIsMTAxLjQ1OVptLTEzLjgzOCwxNi43MTcuMS0uMmE1My4xLDUzLjEsMCwwLDEtNi4xNDYtNS43NTQsNy44MjEsNy44MjEsMCwwLDEtMi4xNDYtNS4xNDYsNi4zLDYuMywwLDAsMSwxLjU3OC00LjMwNiw1LjIsNS4yLDAsMCwxLDMuODYzLTEuNjc3LDQuNzY0LDQuNzY0LDAsMCwxLDIuOTc0LDEuMDMsNy4wMjUsNy4wMjUsMCwwLDEsMS42NzksMS45NDUsMS4xNTcsMS4xNTcsMCwwLDAsMSwuNTY3LDEuMTU1LDEuMTU1LDAsMCwwLDEtLjU2Nyw3LjA1LDcuMDUsMCwwLDEsMS42NzktMS45NDUsNC43NjgsNC43NjgsMCwwLDEsMi45NzUtMS4wMyw1LjE5MSw1LjE5MSwwLDAsMSwzLjg2MiwxLjY3N0E2LjMsNi4zLDAsMCwxLTQ5MywxMDcuMDc1YTcuODI2LDcuODI2LDAsMCwxLTIuMTQ1LDUuMTQ2LDUzLjE1Myw1My4xNTMsMCwwLDEtNi4xNTQsNS43NmMtLjg0Ni43Mi0xLjgsMS41MzMtMi44LDIuNC0uOTgtLjg1Ni0xLjkyMS0xLjY1OC0yLjc1OC0yLjM3MWwtLjE0LjE2NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDUxNy4xMTcgLTk5LjE1OCkiIGZpbGw9IiMwNDA1MDYiLz4NCjwvc3ZnPg0K");
+}
+
+
 
 
 

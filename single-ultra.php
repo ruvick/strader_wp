@@ -119,6 +119,7 @@ get_header(); ?>
             В корзину
           </button>
           <button class="product-sec__info-btn-pay-click button">Купить в 1 клик</button>
+          <button class="product-sec__info-btn-favorites"></button>
 
         </div>
       </div>
