@@ -126,6 +126,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
       Field::make('text', 'offer_sticker', 'Стикер')->set_width(50), 
       Field::make('text', 'offer_size', 'Размер')->set_width(50), 
       Field::make('text', 'offer_country', 'Страна (фирма)')->set_width(50), 
+      Field::make('text', 'offer_brand', 'Бренд')->set_width(50), 
       Field::make('rich_text', 'offer_smile_charect', 'Харрактеристики')->set_width(100),
         
       // Field::make('text', 'offer_name', 'Название товара')->set_width(30),
