@@ -4475,7 +4475,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .card__img {
   padding: 0 15px;
-  height: auto;
+  /* height: auto; */
+  height: 208px;
   margin-bottom: 34px;
   overflow: hidden;
 }
@@ -5365,6 +5366,14 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
 .product-sl .slider__slide {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 405px;
+}
+
+.product-sl .slider__slide img {
+  height: auto;
 }
 
 .product-sl-paggination {
