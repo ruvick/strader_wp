@@ -131,13 +131,9 @@ get_header(); ?>
       <div class="product-sec__descp-table">
         <!-- <h6 class="product-sec__descp-table-title">Характеристики:</h6> -->
         <div class="product-sec__descp-table-flex">
-          <?echo carbon_get_post_meta(get_the_ID(),"offer_smile_charect"); ?>
-          <!-- <ul class="product-sec__descp-table-list">
-            <li class="product-sec__descp-table-list-item">Струна Е/Ми: сталь, диаметр 0.28 мм, натяжение 7,3 кг.</li>
-            <li class="product-sec__descp-table-list-item">Струна А/Ля: алюминиевый сплав, диаметр 0.59 мм, натяжение 6,3 кг.</li>
-            <li class="product-sec__descp-table-list-item">Струна D/Ре: алюминиевый сплав, диаметр 0.71 мм, натяжение 5,3 кг.</li>
-            <li class="product-sec__descp-table-list-item">Струна G/Соль: нейзильбер, диаметр 0.74 мм., натяжение 4,9 кг.</li>
-          </ul> -->
+          <div class="product-sec__descp-table-info">
+            <?echo carbon_get_post_meta(get_the_ID(),"offer_smile_charect"); ?>
+          </div>
           <ul class="product-sec__descp-table-list product-sec__descp-table-list_right">
             <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Размер <p><?echo carbon_get_post_meta(get_the_ID(),"offer_size"); ?></p></li>
             <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна (фирма) <p><?echo carbon_get_post_meta(get_the_ID(),"offer_country"); ?></p></li>
