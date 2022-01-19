@@ -11,7 +11,7 @@
 				} else if ($jachejka === 0 || $jachejka === '0') {
 					echo '<span class="card-pr__availability">Нет в наличии</span> ';
 				} else {
-					echo '<span class="card-pr__availability">В наличии, более 3 шт.</span> ';
+					echo '<span class="card-pr__availability">В наличии</span> ';
 				}
 		?>
 		<p class="card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>

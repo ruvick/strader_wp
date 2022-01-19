@@ -4743,7 +4743,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   margin-bottom: 11px;
 }
 
-.card-pr__availability:before {
+/* .card-pr__availability:before {
   content: "";
   float: left;
   width: 8px;
@@ -4753,7 +4753,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   background-repeat: no-repeat;
   background-size: 100%;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5LjM2NiIgaGVpZ2h0PSI2LjUwNyIgdmlld0JveD0iMCAwIDkuMzY2IDYuNTA3Ij4NCiAgPHBhdGggaWQ9ItCa0L7QvdGC0YPRgF8zNDEiIGRhdGEtbmFtZT0i0JrQvtC90YLRg9GAIDM0MSIgZD0iTTQ2NDUuODIxLDE2ODAuMTc5bDMuNzg5LDQuMTY4LDQuMTY4LTUuMzA1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDY0NS4xMTUgLTE2NzguMzQpIiBmaWxsPSJub25lIiBzdHJva2U9IiM2NjBiMWQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+DQo8L3N2Zz4NCg==");
-}
+} */
 
 .product-sec__descp {
   padding: 26px 0 70px 0;
