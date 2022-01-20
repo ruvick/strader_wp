@@ -25,7 +25,7 @@
 
               <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
                 <div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Бренд</div>
-                <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
+                <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body" id = "filterBrandWrapper">
                   <label for="check" class="checkbox catalog-sec__sidebar-spollers-checkbox">
                     <input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
                     <span class="checkbox__text"><span>Alice</span></span>

@@ -42,18 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
     xhr.onload = () => {
         console.log(xhr.response);
         
-        // Размер
-        let sizeStr = ""
-        xhr.response.offer_size.forEach((element, index) => {
+        // Бренд
+        let uStr = ""
+        xhr.response.offer_brand.forEach((element, index) => {
             
             let checed = (qParam.sizecheck != undefined && qParam.sizecheck.includes(element) )?"checked":"";
 
-            sizeStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
-							'<input id="size_'+index+'" name="sizecheck[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
-							'<label for="size_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
-						'</li>'
+            // uStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
+			// 				'<input id="size_'+index+'" name="sizecheck[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
+			// 				'<label for="size_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
+			// 			'</li>'
+
+            uStr += '<label for="check" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
+                        '<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="brand[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</span></span>'+
+                    '</label>'
         });
-        sizeFilterList.innerHTML = sizeStr;
+        filterBrandWrapper.innerHTML = uStr;
 
         // Световой эффект
         let dtypeStr = ""
