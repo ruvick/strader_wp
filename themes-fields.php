@@ -110,7 +110,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
           ->set_width(50),
     ) );
     Container::make('post_meta', 'product_product_cr', 'Характеристики товара')
-    ->show_on_post_type(array( 'product'))
+    ->show_on_post_type(array( 'ultra'))
       ->add_fields(array(   
       Field::make( 'complex', 'offer_picture', "Галерея товара" )
       ->add_fields( array(

@@ -175,6 +175,8 @@ function my_assets()
 	wp_enqueue_script('vendors', get_template_directory_uri() . '/js/vendors.min.js', array(), $scrypt_version, true); //Библиотеки
 	// wp_enqueue_script('html2pdf', get_template_directory_uri() . '/js/html2pdf.bundle.js', array(), $scrypt_version, true); //Create PDF-page  
 
+	wp_enqueue_script('filter', get_template_directory_uri() . '/js/filter.js', array(), $scrypt_version, true); // Подключение фильтра
+
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), $scrypt_version, true); // Подключение основного скрипта в самом конце
 
 	if ( is_page(17))
@@ -268,6 +270,7 @@ function create_taxonomies(){
 		),
 		'description' => "Категория товаров для магазина",
 		'public' => true,
+		// 'rewrite'       => array( 'slug' => 'products' ),
 		'show_ui'       => true,
 		'query_var'     => true,
 		'show_in_rest'  => true,
@@ -878,6 +881,120 @@ add_action( 'wp_ajax_nopriv_get_zak_detail', 'get_zak_detail' );
       wp_die( 'НО-НО-НО!', '', 403 );
     }
   }
+
+
+  // Фильтр Start ================================================================================================================
+
+
+add_action('rest_api_init', function () {
+	register_rest_route('gensvet/v2', '/get_filter', array(
+		'methods'  => 'GET',
+		'callback' => 'get_filter',
+		'args' => array(
+			'catid' => array(
+				'default'           => null,
+				'required'          => true,
+			)
+		),
+	));
+});
+
+//http://ruvick.site/wp-json/gensvet/v2/get_filter?catid=33
+function get_filter(WP_REST_Request $request)
+{
+
+	$queryParam = array(
+		'post_type' => 'ultra',
+		'posts_per_page' => -1,
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'ultracat',
+				'field'    => 'id',
+				'terms'    => $request['catid']
+			)
+		)
+
+	);
+
+	//_offer_size - размер
+	//_offer_diod_type - тип диодов
+	//_offer_driver - наличие драйвера
+	//_offer_power - мощьность
+	//_offer_light_flow - Световой поток
+	//_offer_diffuser - Рассеиватель
+
+	$queryMain = new WP_Query($queryParam);
+
+
+	$rez = array();
+
+	$rez["offer_size"] = array();
+	$rez["offer_diod_type"] = array();
+	$rez["offer_driver"] = array();
+	$rez["offer_power"] = array();
+	$rez["offer_light_flow"] = array();
+	$rez["offer_diffuser"] = array();
+	$rez["offer_colour_temp"] = array();
+
+	// $min = PHP_INT_MAX;
+	// $max = PHP_INT_MIN;
+
+	foreach ($queryMain->posts as $postM) {
+
+		$offer_size = get_post_meta($postM->ID, "_offer_size", true);
+		if (!empty($offer_size) && !in_array($offer_size, $rez["offer_size"]))
+			$rez["offer_size"][] = $offer_size;
+
+		$offer_diod_type = get_post_meta($postM->ID, "_offer_light_effect", true);
+		if (!empty($offer_diod_type) && !in_array($offer_diod_type, $rez["offer_light_effect"]))
+			$rez["offer_light_effect"][] = $offer_diod_type;
+
+		$offer_driver = carbon_get_post_meta($postM->ID, "driver_complex");
+		$product_driver = $offer_driver[0]['driver_denomination'];
+		if (!empty($product_driver) && !in_array($product_driver, $rez["offer_driver"]))
+			$rez["offer_driver"][] = $product_driver;
+
+		$offer_power = get_post_meta($postM->ID, "_offer_power", true);
+		if (!empty($offer_power) && !in_array($offer_power, $rez["offer_power"]))
+			$rez["offer_power"][] = $offer_power;
+
+		$offer_light_flow = get_post_meta($postM->ID, "_offer_light_flow", true);
+		if (!empty($offer_light_flow) && !in_array($offer_light_flow, $rez["offer_light_flow"]))
+			$rez["offer_light_flow"][] = $offer_light_flow;
+
+		$offer_diffuser = get_post_meta($postM->ID, "_offer_diffuser", true);
+		if (!empty($offer_diffuser) && !in_array($offer_diffuser, $rez["offer_diffuser"]))
+			$rez["offer_diffuser"][] = $offer_diffuser;
+
+		$offer_color_type = get_post_meta($postM->ID, "_offer_colour_temp", true);
+		if (!empty($offer_color_type) && !in_array($offer_color_type, $rez["offer_colour_temp"]))
+			$rez["offer_colour_temp"][] = $offer_color_type;
+
+		// if ($min > (int)get_post_meta($postM->ID, "_offer_colour_temp", true))
+		// 	$min = (int)get_post_meta($postM->ID, "_offer_colour_temp", true);
+
+		// if ($max < (int)get_post_meta($postM->ID, "_offer_colour_temp", true))
+		// 	$max = (int)get_post_meta($postM->ID, "_offer_colour_temp", true);
+	}
+
+	// $rez["offer_colour_temp_max"] = $max;
+	// $rez["offer_colour_temp_min"] = $min;
+
+	sort($rez["offer_size"]);
+	sort($rez["offer_light_effect"]);
+	sort($rez["offer_driver"]);
+	sort($rez["offer_power"]);
+	sort($rez["offer_light_flow"]);
+	sort($rez["offer_diffuser"]);
+	sort($rez["offer_colour_temp"]);
+
+	if (!empty($rez))
+		return $rez;
+	else
+		return new WP_Error('no_token', 'Токен не найден или пользователь уже разлогинен.', ['status' => 403]);
+}
+
+// Фильтр End ================================================================================================================
 
 		
 ?>
