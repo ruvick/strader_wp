@@ -1,4 +1,4 @@
-const filterParamLoad = 'http://ruvick.site/wp-json/gensvet/v2/get_filter'
+const filterParamLoad = 'https://strader.asmi-studio.ru/wp-json/gensvet/v2/'
 
 
 

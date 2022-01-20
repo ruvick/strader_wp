@@ -899,7 +899,7 @@ add_action('rest_api_init', function () {
 	));
 });
 
-//http://ruvick.site/wp-json/gensvet/v2/get_filter?catid=33
+//https://strader.asmi-studio.ru/wp-json/gensvet/v2/get_filter?catid=45
 function get_filter(WP_REST_Request $request)
 {
 
@@ -916,77 +916,46 @@ function get_filter(WP_REST_Request $request)
 
 	);
 
-	//_offer_size - размер
-	//_offer_diod_type - тип диодов
-	//_offer_driver - наличие драйвера
-	//_offer_power - мощьность
-	//_offer_light_flow - Световой поток
-	//_offer_diffuser - Рассеиватель
+	//_offer_nal - наличие
+	//_offer_country - страна
+	//_offer_brand - бренд
 
 	$queryMain = new WP_Query($queryParam);
 
 
 	$rez = array();
 
-	$rez["offer_size"] = array();
-	$rez["offer_diod_type"] = array();
-	$rez["offer_driver"] = array();
-	$rez["offer_power"] = array();
-	$rez["offer_light_flow"] = array();
-	$rez["offer_diffuser"] = array();
-	$rez["offer_colour_temp"] = array();
+	
+	$rez["offer_country"] = array();
+	$rez["offer_brand"] = array();
 
-	// $min = PHP_INT_MAX;
-	// $max = PHP_INT_MIN;
+	$min = PHP_INT_MAX;
+	$max = PHP_INT_MIN;
 
 	foreach ($queryMain->posts as $postM) {
 
-		$offer_size = get_post_meta($postM->ID, "_offer_size", true);
-		if (!empty($offer_size) && !in_array($offer_size, $rez["offer_size"]))
-			$rez["offer_size"][] = $offer_size;
+		$offer_country = get_post_meta($postM->ID, "_offer_country", true);
+		if (!empty($offer_country) && !in_array($offer_country, $rez["offer_country"]))
+			$rez["offer_country"][] = $offer_country;
 
-		$offer_diod_type = get_post_meta($postM->ID, "_offer_light_effect", true);
-		if (!empty($offer_diod_type) && !in_array($offer_diod_type, $rez["offer_light_effect"]))
-			$rez["offer_light_effect"][] = $offer_diod_type;
+		$offer_brand = get_post_meta($postM->ID, "_offer_brand", true);
+		if (!empty($offer_brand) && !in_array($offer_brand, $rez["offer_brand"]))
+			$rez["offer_brand"][] = $offer_brand;
 
-		$offer_driver = carbon_get_post_meta($postM->ID, "driver_complex");
-		$product_driver = $offer_driver[0]['driver_denomination'];
-		if (!empty($product_driver) && !in_array($product_driver, $rez["offer_driver"]))
-			$rez["offer_driver"][] = $product_driver;
 
-		$offer_power = get_post_meta($postM->ID, "_offer_power", true);
-		if (!empty($offer_power) && !in_array($offer_power, $rez["offer_power"]))
-			$rez["offer_power"][] = $offer_power;
 
-		$offer_light_flow = get_post_meta($postM->ID, "_offer_light_flow", true);
-		if (!empty($offer_light_flow) && !in_array($offer_light_flow, $rez["offer_light_flow"]))
-			$rez["offer_light_flow"][] = $offer_light_flow;
+		if ($min > (int)get_post_meta($postM->ID, "_offer_price", true))
+			$min = (int)get_post_meta($postM->ID, "_offer_price", true);
 
-		$offer_diffuser = get_post_meta($postM->ID, "_offer_diffuser", true);
-		if (!empty($offer_diffuser) && !in_array($offer_diffuser, $rez["offer_diffuser"]))
-			$rez["offer_diffuser"][] = $offer_diffuser;
-
-		$offer_color_type = get_post_meta($postM->ID, "_offer_colour_temp", true);
-		if (!empty($offer_color_type) && !in_array($offer_color_type, $rez["offer_colour_temp"]))
-			$rez["offer_colour_temp"][] = $offer_color_type;
-
-		// if ($min > (int)get_post_meta($postM->ID, "_offer_colour_temp", true))
-		// 	$min = (int)get_post_meta($postM->ID, "_offer_colour_temp", true);
-
-		// if ($max < (int)get_post_meta($postM->ID, "_offer_colour_temp", true))
-		// 	$max = (int)get_post_meta($postM->ID, "_offer_colour_temp", true);
+		if ($max < (int)get_post_meta($postM->ID, "_offer_price", true))
+			$max = (int)get_post_meta($postM->ID, "_offer_price", true);
 	}
 
-	// $rez["offer_colour_temp_max"] = $max;
-	// $rez["offer_colour_temp_min"] = $min;
+	$rez["offer_price_max"] = $max;
+	$rez["offer_price_min"] = $min;
 
-	sort($rez["offer_size"]);
-	sort($rez["offer_light_effect"]);
-	sort($rez["offer_driver"]);
-	sort($rez["offer_power"]);
-	sort($rez["offer_light_flow"]);
-	sort($rez["offer_diffuser"]);
-	sort($rez["offer_colour_temp"]);
+	sort($rez["offer_country"]);
+	sort($rez["offer_brand"]);
 
 	if (!empty($rez))
 		return $rez;
