@@ -4974,6 +4974,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 35px;
+  display: none;
 }
 
 .catalog-sec__sidebar-spollers-checkbox {

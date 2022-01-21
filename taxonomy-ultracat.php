@@ -4,6 +4,8 @@
 
 <main class="page">
 
+    <div id = "tovarCategoryId" data-id = "<? echo get_queried_object()->term_id; ?>"></div>
+
     <section class="header-sec">
   		<div class="_container">
 				<?php

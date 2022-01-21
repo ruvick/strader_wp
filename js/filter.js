@@ -1,4 +1,4 @@
-const filterParamLoad = 'https://strader.asmi-studio.ru/wp-json/gensvet/v2/'
+const filterParamLoad = 'https://strader.asmi-studio.ru/wp-json/gensvet/v2/get_filter'
 
 
 
@@ -48,105 +48,103 @@ document.addEventListener("DOMContentLoaded", () => {
             
             let checed = (qParam.sizecheck != undefined && qParam.sizecheck.includes(element) )?"checked":"";
 
-            // uStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
-			// 				'<input id="size_'+index+'" name="sizecheck[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
-			// 				'<label for="size_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
-			// 			'</li>'
-
-            uStr += '<label for="check" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
-                        '<input id="check" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="brand[]">'+
+            uStr += '<label for="check_brand'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
+                        '<input id="check_brand'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="brand[]">'+
                         '<span class="checkbox__text"><span>'+element+'</span></span>'+
                     '</label>'
         });
         filterBrandWrapper.innerHTML = uStr;
 
-        // Световой эффект
-        let dtypeStr = ""
+        // Страна
+        uStr = ""
 
-        console.log(xhr.response.offer_light_effect);
-            console.log(qParam.diodtype);
-        xhr.response.offer_light_effect.forEach((element, index) => {
-            
-            
+        console.log(xhr.response.offer_country);
+        console.log(qParam.diodtype);
+        xhr.response.offer_country.forEach((element, index) => {
 
             let checed = (qParam.diodtype != undefined && qParam.diodtype.includes(element) )?"checked":"";
 
-            dtypeStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
-							'<input id="dtype_'+index+'" name="diodtype[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
-							'<label for="dtype_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
-						'</li>'
-        });
-        dtypeFilterList.innerHTML = dtypeStr;
-
-        // Комплектация
-        let onlyStarter = ""
-        xhr.response.offer_driver.forEach((element, index) => {
+            // uStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
+			// 				'<input id="dtype_'+index+'" name="diodtype[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
+			// 				'<label for="dtype_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
+			// 			'</li>'
             
-            let checed = (qParam.drivercheck != undefined && qParam.drivercheck.includes(element) )?"checked":"";
-
-            onlyStarter += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
-							'<input id="driver_'+index+'" name="drivercheck[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
-							'<label for="driver_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
-						'</li>'
+            uStr += '<label for="check_strana'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
+                        '<input id="check_strana'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="strana[]">'+
+                        '<span class="checkbox__text"><span>'+element+'</span></span>'+
+                    '</label>'
         });
-        komplFilterList.innerHTML = onlyStarter;
+        filterStranaWrapper.innerHTML = uStr;
 
-        // Мощность
-        let powerStr = ""
-        xhr.response.offer_power.forEach((element, index) => {
+        // // Комплектация
+        // let onlyStarter = ""
+        // xhr.response.offer_driver.forEach((element, index) => {
             
-            let checed = (qParam.power != undefined && qParam.power.includes(element) )?"checked":"";
+        //     let checed = (qParam.drivercheck != undefined && qParam.drivercheck.includes(element) )?"checked":"";
 
-            powerStr += '<input id="vt'+index+'" type="checkbox" value="'+element+'" name="power[]" '+checed+' >'+
-                        '<label for="vt'+index+'" class="lines-wrap-filter-card-features__btn option">'+element+' Вт</label>'
-        });
+        //     onlyStarter += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
+		// 					'<input id="driver_'+index+'" name="drivercheck[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
+		// 					'<label for="driver_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
+		// 				'</li>'
+        // });
+        // komplFilterList.innerHTML = onlyStarter;
 
-        powerFilterList.innerHTML = powerStr;
-
-        // Световой поток
-        let lightFlowStr = ""
-        xhr.response.offer_light_flow.forEach((element, index) => {
+        // // Мощность
+        // let powerStr = ""
+        // xhr.response.offer_power.forEach((element, index) => {
             
-            let checed = (qParam.lightflow != undefined && qParam.lightflow.includes(element) )?"checked":"";
+        //     let checed = (qParam.power != undefined && qParam.power.includes(element) )?"checked":"";
 
-            lightFlowStr += '<input id="lightflow_'+index+'" type="checkbox" value="'+element+'" name="lightflow[]" '+checed+' >'+
-                        '<label for="lightflow_'+index+'" class="lines-wrap-filter-card-features__btn option">'+element+' Лм</label>'
-        });
+        //     powerStr += '<input id="vt'+index+'" type="checkbox" value="'+element+'" name="power[]" '+checed+' >'+
+        //                 '<label for="vt'+index+'" class="lines-wrap-filter-card-features__btn option">'+element+' Вт</label>'
+        // });
 
-        lightflowFilterList.innerHTML = lightFlowStr;
+        // powerFilterList.innerHTML = powerStr;
 
-        // Рассеиватель
-        let diffuserStr = ""
-        xhr.response.offer_diffuser.forEach((element, index) => {
+        // // Световой поток
+        // let lightFlowStr = ""
+        // xhr.response.offer_light_flow.forEach((element, index) => {
             
-            let checed = (qParam.rscheck != undefined && qParam.rscheck.includes(element) )?"checked":"";
+        //     let checed = (qParam.lightflow != undefined && qParam.lightflow.includes(element) )?"checked":"";
 
-            diffuserStr += '<li class="lines-wrap-filter-card-features-list-item">'+
-                                '<input id = "ras_'+index+'" name="rscheck[]" value = "'+element+'" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" '+checed+' hidden data-value="'+element+'" >'+
-                                '<label for = "ras_'+index+'" class="lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
-                            '</li>'
-        });
-        diffuserFilterList.innerHTML = diffuserStr;
+        //     lightFlowStr += '<input id="lightflow_'+index+'" type="checkbox" value="'+element+'" name="lightflow[]" '+checed+' >'+
+        //                 '<label for="lightflow_'+index+'" class="lines-wrap-filter-card-features__btn option">'+element+' Лм</label>'
+        // });
 
-        // Световая температура
-        let colortypeStr = ""
-        xhr.response.offer_colour_temp.forEach((element, index) => {
+        // lightflowFilterList.innerHTML = lightFlowStr;
+
+        // // Рассеиватель
+        // let diffuserStr = ""
+        // xhr.response.offer_diffuser.forEach((element, index) => {
             
-            let checed = (qParam.colortype != undefined && qParam.colortype.includes(element) )?"checked":"";
+        //     let checed = (qParam.rscheck != undefined && qParam.rscheck.includes(element) )?"checked":"";
 
-            colortypeStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
-							'<input id="color_'+index+'" name="colortype[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
-							'<label for="color_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+' K</label>'+
-						'</li>'
-        });
-        colortypeFilterList.innerHTML = colortypeStr;
+        //     diffuserStr += '<li class="lines-wrap-filter-card-features-list-item">'+
+        //                         '<input id = "ras_'+index+'" name="rscheck[]" value = "'+element+'" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" '+checed+' hidden data-value="'+element+'" >'+
+        //                         '<label for = "ras_'+index+'" class="lines-wrap-filter-card-features-list-item__desc">'+element+'</label>'+
+        //                     '</li>'
+        // });
+        // diffuserFilterList.innerHTML = diffuserStr;
 
-        // colortFrom.value = xhr.response.offer_colour_temp_min;
-        // colortTo.value = xhr.response.offer_colour_temp_max;
+        // // Световая температура
+        // let colortypeStr = ""
+        // xhr.response.offer_colour_temp.forEach((element, index) => {
+            
+        //     let checed = (qParam.colortype != undefined && qParam.colortype.includes(element) )?"checked":"";
+
+        //     colortypeStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
+		// 					'<input id="color_'+index+'" name="colortype[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
+		// 					'<label for="color_'+index+'" class=" lines-wrap-filter-card-features-list-item__desc">'+element+' K</label>'+
+		// 				'</li>'
+        // });
+        // colortypeFilterList.innerHTML = colortypeStr;
+
+        priceOt.value = xhr.response.offer_price_min;
+        priceDo.value = xhr.response.offer_price_max;
 
         // serRangeSlider();
 
-        dropdownInit(".dropdownAfterLoad");
+
 
         categoryFilterLoader.style.display = "none";
         categoryFilterForm.style.display = "block";
