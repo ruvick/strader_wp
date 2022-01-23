@@ -26,16 +26,11 @@ get_header(); ?>
 			<div class="_container">
       <div class="populars__card">
 			<?
+			// var_dump(json_decode(str_replace("\\", "", $_COOKIE['wish'])));
 					$args = array(
-						'posts_per_page' => 5,
+						'posts_per_page' => -1,
 						'post_type' => 'ultra',
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'ultracat',
-								'field' => 'id',
-								'terms' => array(3)
-							)
-						)
+						'post__in' => json_decode(str_replace("\\", "", $_COOKIE['wish']))
 					);
 					$query = new WP_Query($args);
 

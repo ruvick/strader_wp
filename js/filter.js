@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let uStr = ""
         xhr.response.offer_brand.forEach((element, index) => {
             
-            let checed = (qParam.sizecheck != undefined && qParam.sizecheck.includes(element) )?"checked":"";
+            let checed = (qParam.brand != undefined && qParam.brand.includes(element) )?"checked":"";
 
             uStr += '<label for="check_brand'+index+'" class="checkbox catalog-sec__sidebar-spollers-checkbox">'+
                         '<input id="check_brand'+index+'" data-error="Ошибка" class="checkbox__input" type="checkbox" '+checed+' value="'+element+'" name="brand[]">'+
@@ -59,10 +59,10 @@ document.addEventListener("DOMContentLoaded", () => {
         uStr = ""
 
         console.log(xhr.response.offer_country);
-        console.log(qParam.diodtype);
+        console.log(qParam.strana);
         xhr.response.offer_country.forEach((element, index) => {
 
-            let checed = (qParam.diodtype != undefined && qParam.diodtype.includes(element) )?"checked":"";
+            let checed = (qParam.strana != undefined && qParam.strana.includes(element) )?"checked":"";
 
             // uStr += '<li class="lines-wrap-filter-card-features-list-item li_checbox">'+
 			// 				'<input id="dtype_'+index+'" name="diodtype[]" type="checkbox" class="subscription-wrap-form-wrap__checkbox-hidden" hidden="" '+checed+' value = "'+element+'" data-value="'+element+'">'+
@@ -139,11 +139,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // });
         // colortypeFilterList.innerHTML = colortypeStr;
 
-        priceOt.value = xhr.response.offer_price_min;
-        priceDo.value = xhr.response.offer_price_max;
 
-        // serRangeSlider();
-
+        check_nal.checked  = (qParam.nal == undefined)?false:true;
+        
+        priceOt.value = (qParam.price_ot == undefined)?xhr.response.offer_price_min:qParam.price_ot;
+        priceDo.value = (qParam.price_do == undefined)?xhr.response.offer_price_max:qParam.price_do;
 
 
         categoryFilterLoader.style.display = "none";
