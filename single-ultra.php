@@ -90,7 +90,7 @@ get_header(); ?>
 									echo '<p class="product-sec__info-center-flex-availability">Есть в наличии</p>';
 								}
 						?>
-            <p class="product-sec__info-center-flex-delivery">Доставка и оплата</p>
+            <a href="<?php echo get_permalink(2301);?>" class="product-sec__info-center-flex-delivery">Доставка и оплата</a>
           </div>
         </div>
         <div class="product-sec__info-bottom d-flex">
