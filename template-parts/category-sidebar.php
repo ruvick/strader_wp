@@ -9,11 +9,11 @@
             <div class="spollers-block" data-spollers data-one-spoller>
               <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
                 
-                <div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Цена</div>
+                <div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цена</div>
                 <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
                   <div class="catalog-sec__sidebar-price">
                     <div class="catalog-sec__sidebar-price-input">
-                      <label for="priceOt" class="form__label">От</label>
+                      <label for="priceOt" class="form__label">От</label> 
                       <input id="priceOt" autocomplete="off" type="text" id = "priceOt" name="price_ot" data-error="Ошибка"  data-value="25"
                       class="input _digital">
                     </div>
@@ -27,7 +27,7 @@
               </div>
 
               <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
-                <div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Бренд</div>
+                <div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Бренд</div>
                 <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body" id = "filterBrandWrapper">
                   
                   <label for="check" class="checkbox catalog-sec__sidebar-spollers-checkbox">
@@ -47,7 +47,7 @@
               </div>
 
               <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
-                <div class="spollers-block__title catalog-sec__sidebar-spollers-title" data-spoller>Страна производитель</div>
+                <div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Страна производитель</div>
                 <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body" id = "filterStranaWrapper">
                   
                   <label for="check9" class="checkbox catalog-sec__sidebar-spollers-checkbox">
