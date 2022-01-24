@@ -15,9 +15,23 @@
 				}
 		?>
 		<p class="card__price rub"><?echo carbon_get_post_meta($args['element']->ID,"offer_price"); ?> </p>
+		<div class="card__wrap-bascet">
+			<button class="card__favorites towish" data-productid = "<?echo get_the_ID();?>"></button>
+			<button class="card__bascet button" id = "btn__to-card" onclick = "add_tocart(this, document.getElementById('pageNumeric').value); return false;"
+            data-price = "<?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?>"
+						data-sku = "<? echo carbon_get_post_meta(get_the_ID(),"offer_sku")?>"
+						data-size = ""
+            data-oldprice = "<? echo carbon_get_post_meta(get_the_ID(),"offer_old_price")?>"
+            data-lnk = "<? echo  get_the_permalink(get_the_ID());?>"
+            data-name = "<? echo  get_the_title();?>"
+            data-count = "1"
+            data-picture = "<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" >
+            В корзину
+          </button>
+		</div>
 		<? $sticker = carbon_get_post_meta($args['element']->ID,"offer_sticker");
     	if (!empty($sticker)) {?>
-			<span class="card__sticker"><?echo $sticker;?></span>
+			<span class="card__sticker"><?echo $sticker;?></span>  
 		<?}?>
 	</a>
 </div>

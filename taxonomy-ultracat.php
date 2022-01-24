@@ -30,7 +30,7 @@
           <form action="#" class="catalog-sec__sorting-select-form form">
             <div class="catalog-sec__sorting-select-form-line form__line">
               <select name="form[]" class="catalog-sec__sorting-select-form-sel">
-                <option value="1" selected="selected">популярности</option>
+                <option value="1" selected="selected">популярности</option> 
                 <option value="2">популярности</option>
                 <option value="3">популярности</option>
                 <option value="4">популярности</option>

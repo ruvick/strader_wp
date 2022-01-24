@@ -5514,10 +5514,37 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   display: none;
 }
 
+.card__wrap-bascet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
 
+.card__bascet {
+  padding: 8px 15px;
+  color: #fff;
+  background: #AF0018;
+  border: none;
+}
 
+.card__favorites {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
 
-
+.card__favorites:before {
+  content: "";
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNi4wNTQiIGhlaWdodD0iMjMuMjI5Ij48cGF0aCBkYXRhLW5hbWU9ItCa0L7QvdGC0YPRgCA0OCIgZD0iTTIzLjk2NSAyLjMwMWE3LjEgNy4xIDAgMDAtNS4yODQtMi4zIDYuNjYgNi42NiAwIDAwLTQuMTU5IDEuNDM1IDguMzU3IDguMzU3IDAgMDAtMS40OTUgMS41MSA4LjM1NyA4LjM1NyAwIDAwLTEuNDk1LTEuNTFBNi42NTkgNi42NTkgMCAwMDcuMzc0LjAwMWE3LjEwNiA3LjEwNiAwIDAwLTUuMjg1IDIuM0E4LjIyNCA4LjIyNCAwIDAwMCA3LjkxN2E5Ljc0MSA5Ljc0MSAwIDAwMi41OTEgNi4zOCA1NC4yIDU0LjIgMCAwMDYuMzkyIDZjLjg4Ljc0OSAxLjg3NyAxLjYgMi45MTEgMi41YTEuNzIxIDEuNzIxIDAgMDAxLjEzMy40MjYgMS43MjEgMS43MjEgMCAwMDEuMTMzLS40MjZjMS0uODc4IDEuOTczLTEuNyAyLjgzMy0yLjQzOGwuMDgzLS4wNzFhNTQuMzYyIDU0LjM2MiAwIDAwNi4zODgtNiA5LjczOSA5LjczOSAwIDAwMi41OS02LjM4IDguMjI0IDguMjI0IDAgMDAtMi4wODktNS42MDd6TTEwLjEyNyAxOS4wMThsLjEtLjJhNTMuMSA1My4xIDAgMDEtNi4xNDYtNS43NTQgNy44MjEgNy44MjEgMCAwMS0yLjE0Ni01LjE0NiA2LjMgNi4zIDAgMDExLjU3OC00LjMwNiA1LjIgNS4yIDAgMDEzLjg2My0xLjY3NyA0Ljc2NCA0Ljc2NCAwIDAxMi45NzQgMS4wMyA3LjAyNSA3LjAyNSAwIDAxMS42NzkgMS45NDUgMS4xNTcgMS4xNTcgMCAwMDEgLjU2NyAxLjE1NSAxLjE1NSAwIDAwMS0uNTY3IDcuMDUgNy4wNSAwIDAxMS42NzktMS45NDUgNC43NjggNC43NjggMCAwMTIuOTc1LTEuMDMgNS4xOTEgNS4xOTEgMCAwMTMuODYyIDEuNjc3IDYuMyA2LjMgMCAwMTEuNTcyIDQuMzA1IDcuODI2IDcuODI2IDAgMDEtMi4xNDUgNS4xNDYgNTMuMTUzIDUzLjE1MyAwIDAxLTYuMTU0IDUuNzZjLS44NDYuNzItMS44IDEuNTMzLTIuOCAyLjQtLjk4LS44NTYtMS45MjEtMS42NTgtMi43NTgtMi4zNzFsLS4xNC4xNjV6IiBmaWxsPSIjYWYwMDE4Ii8+PC9zdmc+);
+}
 
 
 
