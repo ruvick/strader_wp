@@ -118,7 +118,7 @@ get_header(); ?>
             data-picture = "<?php  $imgTm = get_the_post_thumbnail_url( get_the_ID(), "tominiatyre" ); echo empty($imgTm)?get_bloginfo("template_url")."/img/no-photo.jpg":$imgTm; ?>" >
             В корзину
           </button>
-          <button class="product-sec__info-btn-pay-click button">Купить в 1 клик</button>
+          <!-- <button class="product-sec__info-btn-pay-click button">Купить в 1 клик</button> -->
           <button class="product-sec__info-btn-favorites towish" data-productid = "<?echo get_the_ID();?>"></button>
 
         </div>
@@ -135,7 +135,7 @@ get_header(); ?>
             <?echo carbon_get_post_meta(get_the_ID(),"offer_smile_charect"); ?>
           </div>
           <ul class="product-sec__descp-table-list product-sec__descp-table-list_right">
-            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Размер <p><?echo carbon_get_post_meta(get_the_ID(),"offer_size"); ?></p></li>
+            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Бренд <p><?echo carbon_get_post_meta(get_the_ID(),"offer_brand"); ?></p></li>
             <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна (фирма) <p><?echo carbon_get_post_meta(get_the_ID(),"offer_country"); ?></p></li>
           </ul>
         </div>
