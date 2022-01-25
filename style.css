@@ -5384,7 +5384,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 
 .product-sl .slider__slide img {
-  height: auto;
+  /* height: auto; */
+  object-fit: contain;
 }
 
 .product-sl-paggination {
@@ -5864,9 +5865,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
             flex: 0 1 70%;
   }
 
-  .product-sec__img img {
+  /* .product-sec__img img {
     height: auto;
-  }
+  } */
 
   .product-sec__info-bottom {
     padding: 30px 0 15px 0;
