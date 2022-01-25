@@ -28,36 +28,20 @@
         <div class="catalog-sec__sorting">
           <div class="catalog-sec__sorting-name">Сортировать по:</div>
           <form action="#" class="catalog-sec__sorting-select-form form">
-            <div class="catalog-sec__sorting-select-form-line form__line">
-              <select name="form[]" class="catalog-sec__sorting-select-form-sel">
-                <option value="1" selected="selected">популярности</option> 
-                <option value="2">популярности</option>
-                <option value="3">популярности</option>
-                <option value="4">популярности</option>
-                <option value="2">популярности</option>
-                <option value="3">популярности</option>
-              </select>
-            </div>
-            <div class="catalog-sec__sorting-select-form-line form__line">
-              <select name="form[]" class="catalog-sec__sorting-select-form-sel">
-                <option value="1" selected="selected">алфавиту</option>
-                <option value="2">алфавиту</option>
-                <option value="3">алфавиту</option>
-                <option value="4">алфавиту</option>
-                <option value="2">алфавиту</option>
-                <option value="3">алфавиту</option>
-              </select>
-            </div>
-            <div class="catalog-sec__sorting-select-form-line form__line">
-              <select name="form[]" class="catalog-sec__sorting-select-form-sel">
-                <option value="1" selected="selected">цене</option>
-                <option value="2">цене</option>
-                <option value="3">цене</option>
-                <option value="4">цене</option>
-                <option value="2">цене</option>
-                <option value="3">цене</option>
-              </select>
-            </div>
+    				<div class="catalog-sec__options options">
+      				<label class="catalog-sec__options-item options__item">
+        				<input class="catalog-sec__options-input options__input" checked type="radio" value="1" name="form[option]">
+        				<span class="catalog-sec__options-text options__text"><span>популярности</span></span>
+      				</label>
+      				<label class="catalog-sec__options-item options__item">
+        				<input class="catalog-sec__options-input options__input" type="radio" value="2" name="form[option]">
+        				<span class="catalog-sec__options-text options__text"><span>алфавиту</span></span>
+      				</label>
+      				<label class="catalog-sec__options-item options__item">
+        				<input class="catalog-sec__options-input options__input" type="radio" value="3" name="form[option]">
+        				<span class="catalog-sec__options-text options__text"><span>цене</span></span>
+      				</label>
+    				</div>
           </form>
         </div>
 
