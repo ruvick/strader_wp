@@ -149,43 +149,26 @@ get_header(); ?>
   <div class="_container">
     <h2 class="similar-prod__title">Похожие товары</h2>
     <div class="similar-prod__card sale__card">
-      <?
-					$args = array(
-						'posts_per_page' => 5,
-						'post_type' => 'ultra',
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'ultracat',
-								'field' => 'id',
-								'terms' => array(3)
-							)
-						)
-					);
-					$query = new WP_Query($args);
-
-					foreach( $query->posts as $post ){
-						$query->the_post();
-						get_template_part('template-parts/product-page');
-					}  
-					wp_reset_postdata(); 
-			?>
-
-      <!-- <div class="card-column">
-        <a href="#" class="card card-pr">
-          <div class="card__img">
-            <picture><source srcset="<?php echo get_template_directory_uri();?>/img/product/04.webp" type="image/webp"><img src="<?php echo get_template_directory_uri();?>/img/product/04.jpg?_v=1641456649011" alt=""></picture>
-          </div>
-          <h6 class="card__title card-pr__title">
-            Струны для скрипки 
-            Thomastik Dominant 135 1/8
-            (4 шт)
-          </h6>
-          <span class="card-pr__availability">В наличии, более 3 шт.</span>
-          <p class="card__price rub">3650 </p>
-          <span class="card__sticker">15%</span>
-        </a>
-      </div> -->
-
+		<?
+			$args = array(
+				'posts_per_page' => 5,
+				'post_type' => 'ultra',
+				'orderby' => 'rand',
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'ultracat',
+						'field'    => 'slug',
+						'terms'    => 'aksessuary'
+						),
+					)
+				);
+		$query = new WP_Query($args);
+		foreach( $query->posts as $post ){
+			$query->the_post();
+			get_template_part('template-parts/product-page');
+		}  
+		wp_reset_postdata();
+		?>
     </div>
   </div>
 </section>
