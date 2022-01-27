@@ -136,7 +136,7 @@ get_header(); ?>
           </div>
           <ul class="product-sec__descp-table-list product-sec__descp-table-list_right">
             <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Бренд <p><?echo carbon_get_post_meta(get_the_ID(),"offer_brand"); ?></p></li>
-            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна (фирма) <p><?echo carbon_get_post_meta(get_the_ID(),"offer_country"); ?></p></li>
+            <li class="product-sec__descp-table-list-item product-sec__descp-table-list-item_bold">Страна <p><?echo carbon_get_post_meta(get_the_ID(),"offer_country"); ?></p></li>
           </ul>
         </div>
       </div>
