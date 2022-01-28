@@ -73,12 +73,13 @@
 					$args = array(
 						'posts_per_page' => 5,
 						'post_type' => 'ultra',
+						'orderby' => 'rand',
 						'tax_query' => array(
-							array(
-								'taxonomy' => 'ultracat',
-								'field' => 'id',
-								'terms' => array(3)
-							)
+								array(
+										'taxonomy' => 'ultracat',
+										'field'    => 'slug',
+										'terms'    => 'aksessuary'
+								),
 						)
 					);
 					$query = new WP_Query($args);

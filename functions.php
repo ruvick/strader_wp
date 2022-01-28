@@ -176,6 +176,7 @@ function my_assets()
 	// wp_enqueue_script('html2pdf', get_template_directory_uri() . '/js/html2pdf.bundle.js', array(), $scrypt_version, true); //Create PDF-page  
 
 	wp_enqueue_script('filter', get_template_directory_uri() . '/js/filter.js', array(), $scrypt_version, true); // Подключение фильтра
+	wp_enqueue_script('wish', get_template_directory_uri() . '/js/wishlist.js', array(), $scrypt_version, true); // Подключение листа желаний
 
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array(), $scrypt_version, true); // Подключение основного скрипта в самом конце
 
@@ -220,9 +221,11 @@ function aj_fnc()
 
 
 // Пагинация
-function wp_corenavi() {
-  global $wp_query;
-  $total = isset( $wp_query->max_num_pages ) ? $wp_query->max_num_pages : 1;
+function wp_corenavi($query = null) {
+  
+	global $wp_query;
+	$main_query = (empty($query))?$wp_query:$query;
+  $total = isset( $main_query->max_num_pages ) ? $main_query->max_num_pages : 1;
   $a['total'] = $total;
   $a['mid_size'] = 3; // сколько ссылок показывать слева и справа от текущей
   $a['end_size'] = 1; // сколько ссылок показывать в начале и в конце

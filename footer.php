@@ -24,7 +24,13 @@
 				<? $mail = carbon_get_theme_option("as_email");
 			  	if (!empty($mail)) { ?><a href="mailto:<? echo $mail; ?>" class="footer__column-email"><? echo $mail; ?></a><? } ?>
 				<? $adr = carbon_get_theme_option("as_address"); if (!empty($adr)){?><p class="footer__column-address"><? echo $adr; ?></p><?}?>
-				<h6 class="footer__column-time-work">Часы</h6>
+
+				<div class="soc-block-icon">
+					<a href="<?php echo carbon_get_theme_option('as_insta'); ?>" class="soc-block-icon-link soc-icon-1"></a>
+					<a href="<?php echo carbon_get_theme_option('as_vk'); ?>" class="soc-block-icon-link soc-icon-2"></a>
+				</div>
+				
+				<h6 class="footer__column-time-work">Часы работы</h6>
 				<p class="footer__column-time-work-weekdays">Понедельник—пятница: 9:00–17:00</p>
 				<p class="footer__column-time-work-weekends">Суббота и воскресенье: 11:00–15:00</p>
 			</div>

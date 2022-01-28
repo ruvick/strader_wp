@@ -61,7 +61,7 @@
     <div class="header__center-icons-block">
       <div class="header__center-icons">
         <a href="<?php echo get_permalink(2288);?>" class="header__center-icons-item icons-item-01">
-          <span class="icons-item-number icons-item-number-favorites">0</span>
+          <span class="icons-item-number icons-item-number-favorites wish_counter">0</span>
           <p class="header__center-icons-name">Избранное</p>
         </a>
       </div>

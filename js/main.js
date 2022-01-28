@@ -14,7 +14,7 @@ function inBascetCounting() {
 	cart = JSON.parse(localStorage.getItem("cart"));
 	if (cart == null) cart = [];
 	for (let i = 0; i < cart.length; i++) {
-		let element = document.getElementById('bcounter_' + cart[i].sku); 
+		let element = document.getElementById('bcounter_' + cart[i].sku);
 		if (element != null)
 			element.innerHTML = "(" + cart[i].count + ")";
 	}
@@ -274,10 +274,10 @@ function sliders_bild_callback(params) { }
 // Сюда пишем класс нашего слайдера и меняем переменную
 let productSl = new Swiper('.product-sl', {
 	// effect: 'fade',
-	autoplay: {
-		delay: 3000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 3000,
+	// 	disableOnInteraction: false,
+	// },
 
 	observer: true,
 	observeParents: true,
