@@ -41,7 +41,6 @@ Vue.component('autorisation', {
             localStorage.removeItem('company_name'); 
             localStorage.removeItem('mail'); 
             localStorage.removeItem('phone'); 
-            localStorage.removeItem('inn'); 
             localStorage.removeItem('token'); 
 
             var params = new URLSearchParams();
@@ -81,7 +80,6 @@ Vue.component('autorisation', {
                 localStorage.setItem('company_name', response.data.company_name); 
                 localStorage.setItem('mail', response.data.mail); 
                 localStorage.setItem('phone', response.data.phone); 
-                localStorage.setItem('inn', response.data.inn); 
                 localStorage.setItem('token', response.data.token); 
 
                 eventBus.$emit("cabinet_innit");
@@ -102,10 +100,7 @@ Vue.component('registration', {
     data: function(){
         return{
             name: "", 
-            nameNotEnter:false,        
-            nameorg: "",
-            nameorgNotEnter:false,         
-            inn: "",         
+            nameNotEnter:false,             
             email: "",
             emailNotEnter:false,         
             tel: "",         
@@ -124,7 +119,6 @@ Vue.component('registration', {
        
        registerUser () {
             if (this.name == "") {this.nameNotEnter = true; return;};
-            if (this.nameorg == "") {this.nameorgNotEnter = true; return;};
             if (this.email == "") {this.emailNotEnter = true; return;};
             if (this.password == "") {this.passwordNotEnter = true; return;};
 
@@ -132,16 +126,20 @@ Vue.component('registration', {
             params.append('action', 'user_register');
             params.append('nonce', allAjax.nonce);
             params.append('name', this.name);
-            params.append('nameorg', this.nameorg);
-            params.append('inn', this.inn);
             params.append('email', this.email);
             params.append('tel', this.tel);
             params.append('password', this.password);
+
 
             
 
             axios.post(allAjax.ajaxurl, params)
               .then((response) => {
+                this.name = ""
+                this.email = ""
+                this.tel = ""
+                this.password = ""
+                
                 this.messageText = "Вы успешно зарегистрировались. На емейл указанный при регистрации отправленно письмо с подтверждением регистрации, для использования личного кабинета перейдите по ссылке из письма.";
                 this.showMsgBlk = true;
                 this.msgOk = true;
@@ -208,8 +206,7 @@ Vue.component('kabinet', {
         return{
             UsserZakaz:[],
             name:"",      
-            company:"",      
-            inn:"",      
+            company:"",       
             email:""      
         }
     },
@@ -233,7 +230,6 @@ Vue.component('kabinet', {
         loadClientInfo() {
             this.name = localStorage.getItem("name");
             this.company = localStorage.getItem("company_name");
-            this.inn = localStorage.getItem("inn");
             this.email = localStorage.getItem("mail");
         },
 
@@ -250,7 +246,7 @@ Vue.component('kabinet', {
             params.append('bascetsumm', zaksumm);
             params.append('name', this.name);
             params.append('mail', this.email);
-            params.append('comment', "Повторенный заказ. <br/><strong>Компания: </strong>"+this.company+" <br/><strong>ИНН: </strong>"+this.inn);
+            params.append('comment', "Повторенный заказ. <br/><strong>Компания: </strong>"+this.company+" <br/>");
 
             axios.post(allAjax.ajaxurl, params)
               .then(function (response) {

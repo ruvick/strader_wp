@@ -57,7 +57,7 @@ get_header(); ?>
                     if (!empty($updateRez)) {
                 ?>
                     <div class = "messageFormBlk messageFormBlkOk">
-						Ваша учетная запись успешно активирована! <br/><a href="<?echo get_the_permalink(93)?>">Перейти а личный кабинет</a>
+						Ваша учетная запись успешно активирована! <br/><a href="<?echo get_the_permalink(219)?>">Перейти а личный кабинет</a>
 					</div>
                 <?
                         } else {

@@ -623,10 +623,8 @@ add_action( 'wp_ajax_nopriv_user_register', 'user_register' );
 
 		$insert_rez = $wpdb->insert( "shop_users", array(
 			"name" => $_REQUEST["name"],
-			"company_name" => $_REQUEST["nameorg"],
 			"mail" => $_REQUEST["email"],
 			"phone" => $_REQUEST["tel"],
-			"inn" => $_REQUEST["inn"],
 			"password" => md5($_REQUEST["password"]."agrib"),
 			"autorize" => 0,
 			"autorizeKey" => $email_key
@@ -641,7 +639,7 @@ add_action( 'wp_ajax_nopriv_user_register', 'user_register' );
 			add_filter('wp_mail_content_type', create_function('', 'return "text/html";'));
 	   
 			$mail_message = 
-			"<h1>Подтверждение регистрации в личном кабинете Agribest.ru</h1>".
+			"<h1>Подтверждение регистрации в личном кабинете Strader-Art.ru</h1>".
 			"<p>Уважаемый клиент, для подтверждения учетной записи перейдите по ссылке:<p>".
 			"<a href = '".get_the_permalink(230)."?id=".$wpdb->insert_id."&k=".$email_key."'>Активировать учетную запись.</a>";
 	  
@@ -649,9 +647,7 @@ add_action( 'wp_ajax_nopriv_user_register', 'user_register' );
 			{
 				$mail_message = 
 				"<h1>В личном кабинете зарегистрированна компания:</h1>".
-				"Представитель: <strong>".$_REQUEST["name"]."</strong> <br/>".
-				"Организация: <strong>".$_REQUEST["nameorg"]."</strong> <br/>".
-				"ИНН: <strong>".$_REQUEST["inn"]."</strong> <br/>".
+				"Пользователь: <strong>".$_REQUEST["name"]."</strong> <br/>".
 				"E-mail: <strong>".$_REQUEST["email"]."</strong> <br/>".
 				"Телефон: <strong>".$_REQUEST["tel"]."</strong> <br/>";
 
