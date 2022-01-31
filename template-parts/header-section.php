@@ -54,6 +54,7 @@
         <input type="text" placeholder="Поиск" class="search__input input"
          name="s" id="s">
         <button type="submit" tabindex="2" value="" id="searchsubmit" class="header__search-btn search__btn"></button>
+          <?php get_template_part('template-parts/menu-search');?>
       </form>
     </div>
     <button class="mob-search-btn header__mob-search-btn"></button>
