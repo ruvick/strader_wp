@@ -6606,6 +6606,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
     font-size: 14px;
     padding: 8px 15px;
   }
+  .preSearchWrap {
+    top: 33px;}
 }
 
 @media (max-width: 700px) {
@@ -6788,6 +6790,17 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
         -ms-flex: 0 1 35%;
             flex: 0 1 35%;
   }
+  .preSearchElem {
+    margin-bottom: 5px;}
+}
+
+@media (max-width: 560px) {
+  .preSearchElem {
+    flex-wrap: wrap;}
+  .preSearchElem .img {
+    flex: 2;}
+  .preSearchElem .price {
+    flex: 2;}
 }
 
 @media (max-width: 540px) {
@@ -6863,6 +6876,18 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
   }
+  .preSearchWrap {
+    top: 33px;
+    padding: 5%;}
+  .preSearchElem {
+    flex-wrap: wrap;}
+  .preSearchElem .img {
+    flex: 0 1 100%;}
+  .preSearchElem .text {
+    flex: 1 1 auto;
+    margin: 5px 0;}
+  .preSearchElem {
+    margin-bottom: 10px;}
 }
 
 @media (max-width: 480px) {
@@ -6953,6 +6978,8 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
   }
+  .preSearchWrap {
+    top: 30px;}
 }
 
 @media (max-width: 460px) {

@@ -114,4 +114,5 @@
     value="<?php echo get_search_query() ?>" name="s" id="s">
     <button type="submit" tabindex="2" value="" id="searchsubmit" class="header__search-btn search__btn"></button>
   </form>
+  <?php get_template_part('template-parts/menu-search');?>
 </div>
