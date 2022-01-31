@@ -382,6 +382,42 @@ function posts_custom_columns($column_name, $id){
 
 
 // Отправка формы из модального окна
+add_action('wp_ajax_get_clue', 'get_clue');
+add_action('wp_ajax_nopriv_get_clue', 'get_clue');
+
+function get_clue()
+{
+	if (empty($_REQUEST['nonce'])) {
+		wp_die('0');
+	}
+
+	if (check_ajax_referer('NEHERTUTLAZIT', 'nonce', false)) {
+		$args = array(
+			'posts_per_page' => -1,
+			'post_type' => 'ultra',
+			's' => $_REQUEST['str']
+		);
+		$query = new WP_Query($args);
+
+		$rez = [];
+		foreach ($query->posts as $p)
+		{
+			$rez[] = array(
+				"lnk" => get_the_permalink($p->ID), 
+				"name" => $p->post_title, 
+				"price" => get_post_meta($p->ID, "_offer_price", true),
+				"img" => get_the_post_thumbnail_url($p->ID,"thumbnail")
+
+			);
+		}
+
+		wp_die(json_encode($rez));
+	} else {
+		wp_die('НО-НО-НО!', '', 403);
+	}
+}
+
+// Отправка формы из модального окна
 add_action('wp_ajax_sendphone', 'sendphone');
 add_action('wp_ajax_nopriv_sendphone', 'sendphone');
 

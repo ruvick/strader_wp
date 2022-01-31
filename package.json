@@ -13,6 +13,7 @@
     "send_singl": "scp -C single.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_one": "scp -C page-regchec.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_index": "scp -C index.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
+    "send_main_js": "scp -C js/main.js asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader/js",
     "send_func": "scp -C functions.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_cabinet": "scp -C page-personal-area.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",
     "send_futt": "scp -C footer.php asmi046@asmi046.myjino.ru:domains/strader.asmi-studio.ru/wp-content/themes/strader",

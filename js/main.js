@@ -45,6 +45,76 @@ document.addEventListener("DOMContentLoaded", () => {
 	number_format();
 	cart_recalc();
 	inBascetCounting();
+
+	// Подсказка в поиске
+	let search = document.querySelectorAll('.search__input');
+	if (search) {
+		for (let index = 0; index < search.length; index++) { 
+
+			search[index].addEventListener('focusout', function (e) {
+				let inputClue = document.querySelectorAll('.preSearchWrap');
+				for (let ic = 0; ic < inputClue.length; ic++) {
+					inputClue[ic].style.display = "none"
+					
+				}
+			})
+
+			search[index].addEventListener('keydown', function (e) {
+				
+				console.log(search[index].value);
+				
+				var xhr = new XMLHttpRequest()
+
+				if (search[index].value.length < 4) return;
+
+				var params = new URLSearchParams()
+				params.append('action', 'get_clue')
+				params.append('nonce', allAjax.nonce)
+				params.append('str', search[index].value)
+				
+				xhr.onload = function (e) {
+					let searchElements = JSON.parse( xhr.response)
+					let rez_str = ""
+					
+					for (let i = 0; i<searchElements.length; i++){
+						rez_str += '<a class="preSearchElemLnk" href="'+searchElements[i].lnk+'">'+
+										'<div class="preSearchElem">'+
+					  						'<div class="img" style="background-image: url('+searchElements[i].img+')"></div>'+
+						  				
+										'<div class="text">'+
+											'<span>'+searchElements[i].name+'</span>'+
+										'</div>'+
+										
+										'<div class="price">'+
+											'<span class="cur">'+searchElements[i].price+' ₽</span>'+
+										'</div>'+
+									'</div>'+
+									'</a>'
+				
+
+					}
+
+					let inputClue = document.querySelectorAll('.preSearchWrap');
+					for (let ic = 0; ic < inputClue.length; ic++) {
+						inputClue[ic].style.display = "block"
+						inputClue[ic].innerHTML = rez_str;
+					}
+
+					console.log(JSON.parse( xhr.response) );		
+				}
+
+				xhr.onerror = function () {
+					error(xhr, xhr.status);
+				};
+
+				xhr.open('POST', allAjax.ajaxurl, true);
+				xhr.send(params);
+			});
+		}
+		
+
+	}
+
 });
 
 //--- Корзина -------------------------------------------------------------------------------------------------------------
@@ -2444,5 +2514,6 @@ $(".fancybox").fancybox();
 
 
 // Файлы jQuery---------------------------------------------------------------------------------------------------------------
+
 
 

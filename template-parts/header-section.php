@@ -52,7 +52,7 @@
       <form class="header__search-form" role="search" method="get" action="<?php echo home_url( '/' ) ?>" id="searchform"
         class="search__form">
         <input type="text" placeholder="Поиск" class="search__input input"
-         name="s" id="s">
+         name="s" id="s" value = "<? echo $_REQUEST["s"]?>">
         <button type="submit" tabindex="2" value="" id="searchsubmit" class="header__search-btn search__btn"></button>
           <?php get_template_part('template-parts/menu-search');?>
       </form>
