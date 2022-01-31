@@ -5663,7 +5663,10 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 }
 /* Меню поиска END */ 
 
-
+.messageFormBlkOk {
+  margin: 15px 0;
+  color: red;
+}
 
 
 
