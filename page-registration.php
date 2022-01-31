@@ -31,7 +31,7 @@
 				  <input type="text" name="name" placeholder="Наименование организации" id="form-namew" class="reviews__form-input input">
 				  <input type="password" name="password" placeholder="Пароль" id="form-telw" class="reviews__form-input input">
 				  <input type="password" name="password" placeholder="Подтверждение пароля" id="form-telw" class="reviews__form-input input">
-				  <button type="submit" class="authoriz__form-btn_register reviews__form-btn agriwind btn">Зарегистрироваться</button>
+				  <button type="submit" class="reviews__form-btn agriwind btn">Зарегистрироваться</button>
 			  </form> 
 			</div>
 		</section>
