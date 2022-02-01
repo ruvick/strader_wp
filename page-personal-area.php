@@ -31,8 +31,8 @@
 					<input v-model="email" :class = "{dontz:emailNotEnter}" autocomplete="off" type="email" name="email" placeholder="Email" id="form-emailw" class="reviews__form-input input">
 					<input v-model="password" :class = "{dontz:passwordNotEnter}" autocomplete="new-password" type="password" name="password" placeholder="Пароль" id="form-telw" class="reviews__form-input input">
 					<div class = "btn_wrapper">
-						<button @click.prevent  = "getAutorisation"  type="button" class="authoriz__form-btn reviews__form-btn agriwind btn">Войти</button>
-						<button @click.prevent  = "toRegister" type="button" class="reviews__form-btn agriwind btn btn-tr" id = "registerbtn">Регистрация</button>
+						<button @click.prevent  = "getAutorisation"  type="button" class="authoriz__form-btn product-sec__info-btn-bascet reviews__form-btn agriwind btn">Войти</button>
+						<button @click.prevent  = "toRegister" type="button" class="authoriz__form-btn_register reviews__form-btn agriwind btn btn-tr" id = "registerbtn">Регистрация</button>
 					</div>
 
 					<div class = "btn_wrapper" id = "passRecoveryWrapper">
@@ -72,8 +72,8 @@
 					<input v-model="tel" autocomplete="off" type="tel" name="tel" placeholder="Телефон" id="form-telw" class="reviews__form-input input">
 					<input v-model="password" :class = "{dontz:passwordNotEnter}" type="password" name="password" autocomplete="new-password"  placeholder="Пароль*" id="form-telw" class="reviews__form-input input">
 					<div class = "btn_wrapper">
-						<button @click.prevent  = "registerUser" type="button" class="reviews__form-btn agriwind btn">Зарегистрироваться</button>
-						<button  @click.prevent  = "toAutorization" type="button" class="reviews__form-btn agriwind btn btn-tr" id = "registerbtn">Авторизация</button>
+						<button @click.prevent  = "registerUser" type="button" class="authoriz__form-btn_register reviews__form-btn agriwind btn">Зарегистрироваться</button>
+						<button  @click.prevent  = "toAutorization" type="button" class="product-sec__info-btn-bascet reviews__form-btn agriwind btn btn-tr" id = "registerbtn">Авторизация</button>
 					</div>
 
 					<div v-show = "showMsgBlk" :class = "{messageFormBlkOk : msgOk}" class = "messageFormBlk">
@@ -104,8 +104,8 @@
 				<form action="#" class="authoriz__form reviews__form">
 					<input v-model="email"  :class = "{dontz:emailNotEnter}" type="email" name="email" placeholder="Email" id="form-emailw" class="reviews__form-input input">
 					<div class = "btn_wrapper">
-						<button @click.prevent = "getPassRec" type="submit" class="reviews__form-btn agriwind btn">Восстановить</button>
-						<button  @click.prevent  = "toAutorization" type="button" class="reviews__form-btn agriwind btn btn-tr" id = "registerbtn">Авторизация</button>
+						<button @click.prevent = "getPassRec" type="submit" class="product-sec__info-btn-bascet reviews__form-btn agriwind btn">Восстановить</button>
+						<button  @click.prevent  = "toAutorization" type="button" class="authoriz__form-btn_register reviews__form-btn agriwind btn btn-tr" id = "registerbtn">Авторизация</button>
 					</div>
 
 					<div v-show = "showMsgBlk" :class = "{messageFormBlkOk : msgOk}" class = "messageFormBlk">

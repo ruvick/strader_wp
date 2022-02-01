@@ -36,7 +36,7 @@
 				<input type="password" name="password2" autocomplete="new-password"  placeholder="Пароль еще раз*" id="form-pass2" class="reviews__form-input input">
 				
 				<div class = "btn_wrapper">	
-					<input type="submit" name = "pass_rec_sub" class="btn" value = "Восстановить">
+					<input type="submit" name = "pass_rec_sub" class="product-sec__info-btn-bascet btn" value = "Восстановить">
 				</div>
 			</form> 
 
