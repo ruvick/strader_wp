@@ -5832,6 +5832,44 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   object-fit: contain;
 }
 
+.old-price {
+  font-size: 20px;
+  text-decoration: line-through;
+  color: grey;
+}
+
+.product-sec__old-price-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.product-sec__old-price-block-text {
+  font-weight: 700;
+  margin-right: 10px;
+}
+.product-sec__old-price-block .old-price {
+  line-height: 1.5;
+}
+
+.card__price-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card__price {
+  margin-left: 10px;
+}
+
+.catalog-sec__options {
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
 
 
 
@@ -6581,6 +6619,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
   .product-sec__info-center-price {
     font-size: 33px;
     line-height: 1;
+  }
+  .old-price {
+    font-size: 20px;
   }
 
   .product-sec__info-center-flex {

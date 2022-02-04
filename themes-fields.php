@@ -121,6 +121,7 @@ Container::make( 'theme_options', __( 'Настройки темы', 'crb' ) )
 
       Field::make('text', 'offer_sku', 'Артикул (Базовый)')->set_width(50),
       Field::make('text', 'offer_manufact', 'Производитель')->set_width(50), 
+      Field::make('text', 'offer_old_price', 'Старая цена')->set_width(50),
       Field::make('text', 'offer_price', 'Цена')->set_width(50),
       Field::make('text', 'offer_nal', 'Наличие на складе')->set_default_value( 'В наличии')->set_width(50), 
       Field::make('text', 'offer_sticker', 'Стикер')->set_width(50), 

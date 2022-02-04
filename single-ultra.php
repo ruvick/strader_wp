@@ -78,7 +78,18 @@ get_header(); ?>
 					?>
         </div>
         <div class="product-sec__info-center">
-          <p class="product-sec__info-center-price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
+        <?
+						$oldPrice = carbon_get_post_meta(get_the_ID(),"offer_old_price");	
+							if (!empty($oldPrice)) {
+					?>
+              <div class="product-sec__old-price-block">
+                <span class="product-sec__old-price-block-text">Старая цена:</span>
+                <p class="product-sec__info-center-price old-price rub"> <? echo $oldPrice; ?></p>
+              </div>
+					<?
+						}
+					?>
+            <p class="product-sec__info-center-price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
           <div class="product-sec__info-center-flex">
             <?php
 							$jachejka = carbon_get_the_post_meta('offer_nal');

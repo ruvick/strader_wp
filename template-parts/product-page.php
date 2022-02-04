@@ -14,7 +14,17 @@
 					echo '<span class="card-pr__availability">В наличии</span> ';
 				}
 		?>
-	  <p class="card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
+		<div class="card__price-block">
+		<?
+			$oldPrice = carbon_get_post_meta(get_the_ID(),"offer_old_price");	
+					if (!empty($oldPrice)) {
+		?>
+			<p class="card__price old-price rub"><? echo $oldPrice; ?> </p> 
+		<?
+			}
+		?>
+			<p class="card__price rub"><?echo carbon_get_post_meta(get_the_ID(),"offer_price"); ?> </p>
+		</div>
 		<? $sticker = carbon_get_post_meta(get_the_ID(),"offer_sticker");
     	if (!empty($sticker)) {?>
 			<span class="card__sticker"><?echo $sticker;?></span> 

@@ -14,7 +14,17 @@
 					echo '<span class="card-pr__availability">В наличии</span> ';
 				}
 		?>
-		<p class="card__price rub"><?echo carbon_get_post_meta($args['element']->ID,"offer_price"); ?> </p>
+		<div class="card__price-block">
+		<?
+			$oldPrice = carbon_get_post_meta(get_the_ID(),"offer_old_price");	
+					if (!empty($oldPrice)) {
+		?>
+			<p class="card__price old-price rub"><? echo $oldPrice; ?> </p> 
+		<?
+			}
+		?>
+			<p class="card__price rub"><?echo carbon_get_post_meta($args['element']->ID,"offer_price"); ?> </p> 
+		</div>
 		<div class="card__wrap-bascet">
 			<button class="card__favorites towish" data-productid = "<?echo get_the_ID();?>"></button>
 			<button class="card__bascet button" id = "btn__to-card" onclick = "add_tocart(this, document.getElementById('pageNumeric').value); return false;"

@@ -31,15 +31,15 @@
     				<div class="catalog-sec__options options">
       				<label class="catalog-sec__options-item options__item">
         				<input class="catalog-sec__options-input options__input" checked type="radio" value="1" name="form[option]">
-        				<span class="catalog-sec__options-text options__text"><span>популярности</span></span>
+        				<span class="catalog-sec__options-text options__text"><span>алфавиту</span></span> 
       				</label>
       				<label class="catalog-sec__options-item options__item">
         				<input class="catalog-sec__options-input options__input" type="radio" value="2" name="form[option]">
-        				<span class="catalog-sec__options-text options__text"><span>алфавиту</span></span>
+        				<span class="catalog-sec__options-text options__text"><span>возрастанию цены</span></span>
       				</label>
       				<label class="catalog-sec__options-item options__item">
         				<input class="catalog-sec__options-input options__input" type="radio" value="3" name="form[option]">
-        				<span class="catalog-sec__options-text options__text"><span>цене</span></span>
+        				<span class="catalog-sec__options-text options__text"><span>убыванию цены</span></span>
       				</label>
     				</div>
           </form>
