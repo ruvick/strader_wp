@@ -46,6 +46,33 @@ document.addEventListener("DOMContentLoaded", () => {
 	cart_recalc();
 	inBascetCounting();
 
+	// мобильное меню
+	let mob_menu_punkts = document.querySelectorAll('.mob-menu ul li a:first-of-type');
+	if (mob_menu_punkts) {
+		for (let index = 0; index < mob_menu_punkts.length; index++) {
+			
+
+			mob_menu_punkts[index].addEventListener('click', function (e) { 
+				
+				let subelement = mob_menu_punkts[index].nextSibling.nextSibling;
+				
+				
+
+				if (subelement)  {
+					
+					if (subelement.style.display == 'none' || subelement.style.display == '') mob_menu_punkts[index].classList.add("open")
+					else 
+						mob_menu_punkts[index].classList.remove("open")
+					
+					
+					subelement.style.display = (subelement.style.display == 'none' || subelement.style.display == '')?"block":"none";
+					e.preventDefault();
+				} 
+					
+			})
+		}
+	}
+
 	// Подсказка в поиске
 	let search = document.querySelectorAll('.search__input');
 	if (search) {

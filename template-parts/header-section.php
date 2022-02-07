@@ -101,8 +101,12 @@
 
 <!-- Мобильное меню -->
 <div class="mob-menu header__mob-menu">
-  <?php wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'mob-menu__list',
-    'container_class' => 'mob-menu__list','container' => false )); ?>
+  <?php 
+    // wp_nav_menu( array('theme_location' => 'menu_cat','menu_class' => 'mob-menu__list', 'container_class' => 'mob-menu__list','container' => false )); 
+
+    wp_nav_menu( array('theme_location' => 'menu_cat_hover', 'container' => false ));
+  ?>
+  
   <a href="#callback" class="header__popup-link header__popup-link_mob _popup-link">ЗАКАЗАТЬ ЗВОНОК</a>
 </div>
 

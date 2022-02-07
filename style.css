@@ -3873,10 +3873,52 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   overflow: auto;
 }
 
+.mob-menu ul li a {
+  border-bottom: 1px solid lightgray;
+  
+}
+
+.mob-menu ul li a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  margin-top: 10px;
+  background-image: url(img/icons/arrow-back.svg);
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  float: right;
+  transform: rotate(-90deg);
+}
+
+.mob-menu ul li a.open::after {
+  transform: rotate(90deg);
+}
+
+.mob-menu ul li ul li {
+  background-color: #e9e9e9;
+}
+
+.mob-menu ul li ul li a {
+  margin-left: 5%;
+  width: 95%; 
+  border-bottom: none;
+  
+}
+
+.mob-menu ul li ul li a::after { 
+  display: none;
+}
+
 .mob-menu li a {
   display: inline-block;
   font-size: 16px;
-  padding-bottom: 13px;
+  padding: 6px 0;
+  width: 100%;
+}
+
+.mob-menu li ul { 
+  display: none;
 }
 
 .mob-menu.active {
