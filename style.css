@@ -4322,7 +4322,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
+  margin-bottom: -35px;
 }
 
 .reviews__card {
@@ -4339,6 +4340,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   padding: 0 38px 26px 38px;
   background: #E8E8E8;
   border-radius: 35px;
+  margin-bottom: 75px;
 }
 
 .reviews__image-wrap {
@@ -4351,10 +4353,12 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .reviews__image {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 103px;
-          flex: 0 0 103px;
+  -ms-flex: 0 0 103px;
+  flex: 0 0 103px;
+  width: 103px;
   height: 103px;
   overflow: hidden;
+  border-radius: 50%;
 }
 
 .reviews__image img {
@@ -4389,6 +4393,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 }
 
 .reviews__descp {
+  flex: 1 1 auto;
   font-size: 16px;
   line-height: 19.2px;
   text-align: center;
@@ -6494,8 +6499,9 @@ filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><fi
 
   .reviews__image {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 70px;
-            flex: 0 0 70px;
+    -ms-flex: 0 0 70px;
+    flex: 0 0 70px;
+    width: 70px;
     height: 70px;
   }
 
