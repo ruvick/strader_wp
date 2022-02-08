@@ -122,6 +122,7 @@
 				}
 				?>
 		</div>
+		<a href="<?php echo get_permalink(2357);?>" class="reviews__button btn">Читать все отзывы</a>
 
 	</div>
 </section>
