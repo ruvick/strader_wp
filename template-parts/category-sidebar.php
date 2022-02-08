@@ -5,9 +5,42 @@
 
         <form action="#" class="catalog-sec__sidebar-form" id = "categoryFilterForm">
 
+
+
+
+
           <div class="catalog-sec__sidebar-form-column">
             <div class="spollers-block" data-spollers data-one-spoller>
               <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
+
+              <?
+
+                  $listCat = wp_list_categories (array(
+                    'hierarchical' => true,
+                    'taxonomy' => "ultracat",
+                    'child_of' => get_queried_object()->term_id,
+                    'hide_empty' => false,
+                    'title_li' => '',
+                    'echo' => 0,
+                    'depth' => 1,
+                    'show_option_none'   => "",
+                  ) );
+                  ?>
+                  <? if ((!empty($listCat))&&(!is_search())) {?>
+                    <div class="spollers-block__item catalog-sec__sidebar-spollers-item">
+                        <div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Подкатегории</div>
+                        <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body" id = "filterSubkat">
+                          
+                        <ul id="catmenu" class=" subcatmenu ">
+                          <?
+                            echo $listCat;
+                          ?>	
+                        </ul>
+
+
+                        </div>
+                      </div>
+                  <?}?>
                 
                 <div class="spollers-block__title catalog-sec__sidebar-spollers-title _active" data-spoller>Цена</div>
                 <div class="spollers-block__body catalog-sec__sidebar-spollers-block-body">
